@@ -4,5 +4,3 @@ function requireRoute(name){
 
 requireRoute('listing')
 requireRoute('about')
-requireRoute('products/crud')
-requireRoute('media')

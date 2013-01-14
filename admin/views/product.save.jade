@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  body
+    form(method='post', action='/media-upload', enctype="multipart/form-data")
+      .row
+        input(name='name', type='textfield')
+      .row
+        input(name='desc', type='textarea')
+      .row
+        input(name='image', type='file')
+      .row
+        input(type='submit', value="upload")
