@@ -8,7 +8,17 @@ app.get('/products/create', function(req, res){
   res.render('product.save.jade')
 })
 
-app.post('/products/create', function(req, res){
+app.post('/products/update', function(req, res){
+  console.log(req.body)
+  if(req.body._id){
+
+  }
+  else{
+    var product = Product.initialize(req.body);
+    var test = Product.validate(product);
+    console.log(test);
+    res.redirect('/products/create')
+  }
 })
 
 //READ
