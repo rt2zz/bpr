@@ -23,9 +23,9 @@ app.post('/media-upload', function(req, res){
   console.log('piost media')
   console.log(req.body)
   console.log(req.files)
-  console.log(req.files.media.path)
+  console.log(req.files.file.path)
 
-  fs.createReadStream(req.files.media.path).pipe(amazon.upload({
+  fs.createReadStream(req.files.file.path).pipe(amazon.upload({
     container: 'bpr_media',
     remote: 'remote-file-name.txt'
   }, function(){
@@ -33,4 +33,15 @@ app.post('/media-upload', function(req, res){
   }));
 
   res.redirect('/media-upload')
+})
+
+app.post('/upload', function(req, res){
+  fs.createReadStream(req.files.file.path).pipe(amazon.upload({
+    container: 'bpr_media',
+    remote: req.files.file.name
+  }, function(a, b){
+    console.log(a)
+    console.log(b)
+    res.send('')
+  }));
 })

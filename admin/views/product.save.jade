@@ -17,8 +17,31 @@ block footer
   script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
   script.
     $(document).ready(function(){
+      var imageUploader = $('input[name="imageUploader"]').clone();
       $('input[name="imageUploader"]').change(function(){
-        console.log($(this).val());
+        console.log(this.files[0]);
+        var file = this.files[0];
+        $(this).replaceWith(imageUploader);
+        imageUploader = $('input[name="imageUploader"]').clone();
+        
+        var req = this.req = new XMLHttpRequest;
+        req.open('POST', '/upload');
+        //req.onload = this.onload.bind(this);
+        //req.onerror = this.onerror.bind(this);
+        //req.upload.onprogress = this.onprogress.bind(this);
+        // req.onreadystatechange = function(){
+        //   if (4 == req.readyState) {
+        //     var type = req.status / 100 | 0;
+        //     if (2 == type) return fn(null, req);
+        //     var err = new Error(req.statusText + ': ' + req.response);
+        //     err.status = req.status;
+        //     fn(err);
+        //   }
+        // };
+        var body = new FormData;
+        body.append('file', file);
+        console.log(body);
+        req.send(body);
       });
     });
 
