@@ -1,3 +1,8 @@
+var mediacb=function(req, res){
+  console.log(req)
+  res.render('test/media-upload')
+}
+
 var app = require('../app.js')
 var fs = require('fs')
 
@@ -9,18 +14,11 @@ var amazon = pkgcloud.storage.createClient({
   keyId: 'AKIAIAWPYUBRRO7CKQ4Q'
 });
 
-// amazon.getFiles('bpr_media', function (err, files) {
-//  console.log(err)
-//  console.log(files)
-// })
-
 //Testing
-app.get('/media-upload', function(req, res){
-  res.render('test/media-upload')
-})
+app.get('/media-upload',mediacb)
 
 app.post('/media-upload', function(req, res){
-  console.log('piost media')
+  console.log('post media')
   console.log(req.body)
   console.log(req.files)
   console.log(req.files.file.path)
@@ -29,7 +27,7 @@ app.post('/media-upload', function(req, res){
     container: 'bpr_media',
     remote: 'remote-file-name.txt'
   }, function(){
-    console.log('testcb')
+    console.log('done')
   }));
 
   res.redirect('/media-upload')
@@ -45,3 +43,4 @@ app.post('/upload', function(req, res){
     res.send('')
   }));
 })
+
