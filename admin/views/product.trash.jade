@@ -1,0 +1,40 @@
+extends layout
+
+block content
+
+  .limitS
+    h1 Product Trash
+
+  .limitS
+    ul.products
+      each product in products
+        li.productContainer(pid=product._id)
+          a.update(href="product/"+product._id+"/update")= product.name
+          .pid= product._id
+
+    .section.action
+      button.emptyTrash Empty
+
+block footer
+  script(src=protocol+"://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+  script.
+    $(document).ready(function(){
+      $('.emptyTrash').click(function(e){
+        var pids = $('.productContainer').map(function(){return $(this).attr("pid");}).get();
+        console.log(pids);
+
+        var opts = {
+          type: "POST",
+          url: "/products/purge",
+          data: {
+            pids: pids
+          }
+        }
+        $.ajax(opts).done(function( msg ) {
+          console.log(msg);
+        });
+        $('.productContainer').remove();
+
+
+      });
+    });

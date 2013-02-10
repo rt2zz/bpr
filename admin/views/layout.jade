@@ -1,9 +1,13 @@
 doctype 5
 html(lang="en")
   head
+    link(rel='stylesheet', href='/stylesheets/reset.css')
     link(rel='stylesheet', href='/stylesheets/admin.css')
+    link(rel='stylesheet', href='/stylesheets/forms.css')
+    link(rel='stylesheet', href="/fontawesome/font-awesome.min.css")
+    link(href=protocol+'://fonts.googleapis.com/css?family=Roboto+Condensed', rel='stylesheet', type='text/css')
 
   body
     block content
-
+    include nav
     block footer

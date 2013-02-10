@@ -1,7 +1,95 @@
+html {
+  overflow-y: scroll;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 a {
   color: #00b7ff;
+}
+.limitS {
+  margin: 0 auto;
+  max-width: 600px;
+}
+.spacer {
+  width: 20px;
+  height: 20px;
+}
+h1 {
+  font-family: Roboto Condensed;
+  font-size: 80px;
+}
+.hidden {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+#nav {
+  position: fixed;
+  top: 100px;
+}
+#nav a {
+  display: block;
+  color: #666;
+  padding: 5px;
+  width: 100px;
+}
+#nav a:hover {
+  background: #eee;
+}
+ul.products {
+  list-style: none;
+  position: relative;
+}
+ul.products li {
+  padding: 10px 5px;
+  border-top: 1px dashed #ddd;
+  overflow: hidden;
+}
+ul.products li:first-child {
+  border-top: none;
+}
+.products .delete {
+  float: right;
+  right: 0;
+  color: #a12222;
+}
+.products .pid {
+  float: right;
+  background: #eee;
+  border: 1px solid #ccc;
+  margin: 0 15px;
+  font-size: 10px;
+  padding: 3px;
+  border-radius: 2px;
+}
+.olay {
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.centered {
+  margin-left: -50%;
+}
+input[name="embed"] {
+  padding: 25px 40px 25px 25px;
+  min-width: 400px;
+  float: left;
+}
+.olay .go {
+  margin-left: -40px;
+  margin-top: 20px;
+  color: #ccc;
+  float: left;
+  display: block;
 }
