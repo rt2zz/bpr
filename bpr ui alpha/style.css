@@ -1,7 +1,7 @@
      /* This makes absolutely positioned elements like p, h1,
      and some bootstrap elements placed properly. */
-     #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
-       margin-top: 0 !important;
+     a, a:hover{
+      text-decoration: none;
      }
      .dom-body-text p.p-1 {
        background-image: none;
@@ -80,30 +80,18 @@
        overflow: hidden;
        width: 71px;
        height: 1px;
-       position: absolute;
        top: 38px;
        left: 285px;
      }
-     .dom-body-text.dom-body-text-2 {
-       overflow: hidden;
-       width: 602px;
-       height: 115px;
+     #bannerText {
        position: absolute;
-       top: 76px;
+       top: 194px;
        left: 104px;
-     }
-     .dom-body-text.dom-body-text-3 {
-       width: 520px;
-       height: 673px;
-       position: absolute;
-       top: 201px;
-       left: 138px;
      }
      .dom-body-text.dom-body-text-4 {
        overflow: hidden;
        width: 371px;
        height: 53px;
-       position: absolute;
        top: 23px;
        left: 9px;
      }
@@ -111,7 +99,6 @@
        overflow: hidden;
        width: 371px;
        height: 53px;
-       position: absolute;
        top: 3px;
        left: 10px;
      }
@@ -119,7 +106,6 @@
        overflow: hidden;
        width: 374px;
        height: 120px;
-       position: absolute;
        top: 328px;
        left: 13px;
      }
@@ -127,7 +113,6 @@
        overflow: hidden;
        width: 91px;
        height: 42px;
-       position: absolute;
        top: 440px;
        left: 18px;
      }
@@ -136,7 +121,6 @@
        font-size: 20px;
        height: 20px;
        width: 20px;
-       position: absolute;
        top: 450px;
        left: 818px;
      }
@@ -145,7 +129,6 @@
        font-size: 20px;
        height: 20px;
        width: 20px;
-       position: absolute;
        top: 450px;
        left: 1345px;
      }
@@ -154,7 +137,6 @@
        font-size: 20px;
        height: 20px;
        width: 20px;
-       position: absolute;
        top: 450px;
        left: 1084px;
      }
@@ -163,7 +145,6 @@
        font-size: 20px;
        height: 20px;
        width: 20px;
-       position: absolute;
        top: 450px;
        left: 790px;
      }
@@ -172,7 +153,6 @@
        font-size: 20px;
        height: 20px;
        width: 20px;
-       position: absolute;
        top: 450px;
        left: 1056px;
      }
@@ -181,128 +161,69 @@
        font-size: 20px;
        height: 20px;
        width: 20px;
-       position: absolute;
        top: 450px;
        left: 1317px;
      }
-     .navbar .navbar-inner .nav li a .icon.icon-1 {
+     .navbar .social-media .icon.icon-1 {
        color: #adadad;
        font-size: 40px;
        height: 40px;
        width: 40px;
      }
-     .navbar .navbar-inner .nav li a.a-1 {
+     .navbar .menuitem{
+      float: left;
+     }
+     .navbar .menuitem a.a-1 {
        padding: 25px 15px 25px 15px;
        color: #555555;
        font-size: 20px;
        font-family:"helvetica neue";
        font-weight: 200;
+       display: inline-block;
      }
-     .navbar .navbar-inner .nav li a.a-2 {
+     .navbar .navbar-inner .nav a.a-2 {
        font-family:"arial";
+       font-size: 0px;
        color: #555555;
-       padding: 15px 200px 25px 250px;
-     }
-     .page-header h1 small.small-1 {
+       padding: 15px 0 25px 0;
        font-family:"helvetica neue";
      }
-     .page-header h1 small.small-2 {
+     .navbar .navbar-inner .nav a.a-2:hover{
+        text-decoration: none
+     }
+     .sectionheader h1 small.small-2 {
        font-family:"helvetica neue";
        color: #e8e8e8;
      }
-     .page-header h1.h1-1 {
+     .sectionheader h1{
        font-family:"Marko One";
+       color: #DCDCDC;
      }
-     .page-header h1.h1-2 {
-       text-align: center;
-     }
-     .page-header h1.h1-3 {
+     .sectionheader h1.h1-3 {
        font-family:"Marko One";
        color: #ffffff;
      }
-     .page-header h1.h1-4 {
+     .sectionheader h1.h1-4 {
        font-family:"Marko One";
        font-size: 37.77777862548828px;
+       color: #515151;
      }
-     .page-header.page-header-1 {
-       width: 300px;
-       height: 85.89583349227905px;
-       position: absolute;
-       top: 182px;
-       left: 145px;
-     }
-     .page-header.page-header-2 {
-       width: 384px;
-       height: 209.89583349227905px;
-       position: absolute;
-       top: 591px;
-       left: 991px;
-     }
-     .page-header.page-header-3 {
-       width: 386px;
-       height: 210.89583349227905px;
-       position: absolute;
-       top: 591px;
-       left: 579px;
-     }
-     .page-header.page-header-4 {
-       width: 386px;
-       height: 209.89583349227905px;
-       position: absolute;
-       top: 591px;
-       left: 169px;
-     }
-     .page-header.page-header-5 {
-       width: 290px;
-       height: 84.89583349227905px;
-       position: absolute;
-       top: 49px;
-       left: 140px;
-     }
-     .page-header.page-header-6 {
-       width: 243px;
-       height: 609.895833492279px;
-       position: absolute;
-       top: 224px;
-       left: 959px;
-     }
-     .page-header.page-header-7 {
-       width: 244px;
-       height: 609.895833492279px;
-       position: absolute;
-       top: 225px;
-       left: 1218px;
-     }
-     .page-header.page-header-8 {
-       width: 245px;
-       height: 609.895833492279px;
-       position: absolute;
-       top: 225px;
-       left: 696px;
-     }
-     .page-header.page-header-9 {
+     .sectionheader.sectionheader-9 {
        width: 300px;
        height: 84.89583349227905px;
-       position: absolute;
        top: 1889px;
        left: 134px;
      }
-     .page-header h1.h1-2 small.small-3 {
+     .sectionheader h1.h1-2 small.small-3 {
        font-size: 25.55555534362793px;
        color: #ffffff;
      }
-     #absolute-wrapper {
-       position: relative;
-       width: 1500px;
-       /* centers the document */
-       margin: 0 auto;
-       /* hack to stick to top of page */
-       height: 1px;
-     }
      .navbar {
        height: 70px;
-       width: 1500px;
+       width: 100;
      }
+     .navbar .nav{
+          }
      .navbar .navbar-inner {
        -moz-box-shadow: 0px 2px 2px 0px #e8e8e8, 0px 0px 1px 0px #000000;
        -webkit-box-shadow: 0px 2px 2px 0px #e8e8e8, 0px 0px 1px 0px #000000;
@@ -315,94 +236,32 @@
        color: #5f5f63;
        font-weight: bold;
        font-family:"Marko One";
-       padding: 25px 100px 10px 100px;
+       padding: 25px 10px 10px 0;
        height: 50px;
-       width: 260px;
+       margin:0;
      }
-     .navbar .navbar-inner .nav .active a {
+     .navbar .menuitem.active a,.navbar .menuitem a:hover {
        padding: 25px 15px 25px 15px;
        text-shadow: 0px 0px 0px #ffffff;
-       -moz-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.121569);
-       -webkit-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.121569);
-       -o-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.121569);
-       box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.121569);
+       -moz-box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
+       -webkit-box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
+       -o-box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
+       box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
        font-family:"helvetica neue";
        font-size: 20px;
        font-weight: 200;
+       background-color: #e5e5e5;
      }
-     #rectangle {
+     #banner {
        background: #80ccff;
        border-radius: 0px;
        margin: 0px;
        width: 3000px;
-       height: 75px;
+       height: 142px;
        position: fixed;
-       top: 65px;
+       top: 0;
+       margin-top:65px;
        left: -131px;
-     }
-     .image {
-       border-radius: 0px;
-       margin: 0px;
-       width: 237px;
-       height: 239px;
-       position: absolute;
-       top: 307px;
-       left: 635px;
-     }
-     .image-1 {
-       border-radius: 0px;
-       margin: 0px;
-       width: 218px;
-       height: 226px;
-       position: absolute;
-       top: 315px;
-       left: 1060px;
-     }
-     .image-2 {
-       border-radius: 0px;
-       margin: 0px;
-       width: 243px;
-       height: 225px;
-       position: absolute;
-       top: 318px;
-       left: 246px;
-     }
-     .rectangle-1 {
-       background: #80ccff;
-       border-radius: 0px;
-       margin: 0px;
-       width: 1595px;
-       height: 979px;
-       position: absolute;
-       top: 883px;
-       left: -6px;
-     }
-     .image-3 {
-       border-radius: 0px;
-       margin: 0px;
-       width: 150px;
-       height: 148px;
-       position: absolute;
-       top: 57px;
-       left: 744px;
-     }
-     .image-4 {
-       border-radius: 0px;
-       margin: 0px;
-       width: 150px;
-       height: 148px;
-       position: absolute;
-       top: 59px;
-       left: 1005px;
-     }
-     .image-5 {
-       border-radius: 0px;
-       margin: 0px;
-       width: 150px;
-       height: 148px;
-       position: absolute;
-       top: 59px;
-       left: 1265px;
      }
      /*
 Using this css requires Font Awesome:
@@ -435,16 +294,12 @@ http://fortawesome.github.com/Font-Awesome/
        border: 1px solid #333333;
        width: 398px;
        height: 498px;
-       position: absolute;
-       top: 2017px;
-       left: 137px;
      }
      .image-6 {
        border-radius: 0px;
        margin: 0px;
        width: 335px;
        height: 232px;
-       position: absolute;
        top: 95px;
        left: 29px;
      }
@@ -463,7 +318,6 @@ http://fortawesome.github.com/Font-Awesome/
        border: none;
        width: 273px;
        height: 41px;
-       position: absolute;
        top: 445px;
        left: 113px;
      }
@@ -474,9 +328,6 @@ http://fortawesome.github.com/Font-Awesome/
        border: 1px solid #333333;
        width: 398px;
        height: 498px;
-       position: absolute;
-       top: 2017px;
-       left: 587px;
      }
      .rectangle-4 {
        background: #ffffff;
@@ -485,7 +336,44 @@ http://fortawesome.github.com/Font-Awesome/
        border: 1px solid #333333;
        width: 398px;
        height: 498px;
-       position: absolute;
-       top: 2017px;
-       left: 1041px;
+     }  
+     .social-media {
+      float: right;
+      color: #555555;
+      padding: 15px 0 25px 0;
+      font-family:"helvetica neue";
      }
+     .heroimg {
+     }
+     .hero-header{
+     }
+     .hero-wrapper{
+      float:left;
+      width:33%;
+      text-align: center;
+     }
+     #aboutus{
+      background:#80ccff;
+      padding: 40px 0;
+     }
+     .portrait{
+      width:50px;
+     }
+     .portraitwrapper{
+      width:245px;
+      float:left;
+      text-align: center;
+    }
+    .aboutustext{
+      float:left;
+      width:430px;
+      font-family: helvetica;
+      color:#ffffff;
+      line-height: 2;
+      font-size: 25px;
+    }
+    .findgifts{
+      padding:40px 0;
+    }
+    .sectionheader{
+      margin: 25px 0;
