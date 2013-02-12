@@ -1,13 +1,22 @@
 var mongo = require('mongoskin')
 var creds = require('../config.js').productdb
+var _ = require('lodash')
 
-var db = mongo.db(creds.user+':'+creds.pass+'@'+creds.uri)
+var db = mongo.db(creds.user+':'+creds.pass+'@'+creds.uri, {w: 1})
 db.bind('product', {
-  initialize: function(data){
+  new: function(init){
+    if(typeof init === 'undefined') var init = {}
+    var data = _.defaults(init, {created: new Date().getTime(), name: '', desc: ''})
+    console.log(data)
+    var _id = (data.created+Math.floor((Math.random()*999)+100)).toString(16);
+    console.log(_id)
     return {
-      created: new Date().getTime(),
+      _id: _id,
+      status: 2,
+      created: data.created,
       name: data.name,
-      desc: data.desc
+      desc: data.desc,
+      media: []
     }
   },
   validate: function(product){

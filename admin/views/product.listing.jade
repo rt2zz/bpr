@@ -1,4 +1,33 @@
 extends layout
 
 block content
-  
+  .limitS
+    h1 Products
+  .limitS
+    ul.products
+      each product in products
+        li.productContainer(pid=product._id)
+          a.update(href="/product/"+product._id+"/update")= product.name
+          a.delete(href="/product/"+product._id+"/delete") X
+          .pid= product._id
+
+block footer
+  script(src=protocol+"://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+  script.
+    $(document).ready(function(){
+      $('.delete').click(function(e){
+        e.preventDefault();
+        $row = $(this).closest('.productContainer');
+        var pid = $row.attr('pid');
+        console.log('delete: '+pid);
+        var opts = {
+          type: "POST",
+          url: "product/"+pid+"/delete",
+          data: {test: "re"},
+        }
+        console.log(opts)
+        $.ajax(opts).done(function( msg ) {
+          $row.remove()
+        });
+      });
+    });

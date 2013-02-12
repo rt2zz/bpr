@@ -1,0 +1,379 @@
+     /* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+     a, a:hover{
+      text-decoration: none;
+     }
+     .dom-body-text p.p-1 {
+       background-image: none;
+       font-family: Arial;
+       line-height: 67.3263931274414px;
+       font-size: 26.666667938232422px;
+       background-color: rgba(0, 0, 0, 0);
+       color: #363636;
+       font-weight: 200;
+       text-align: left;
+       border: none;
+     }
+     .dom-body-text p.p-2 {
+       line-height: 1.5;
+       font-family: spinnaker;
+       font-size: 50px;
+       color: #ffffff;
+     }
+     .dom-body-text p.p-3 {
+       font-family: helvetica;
+       font-size: 25px;
+       line-height: 2.0;
+       color: #ffffff;
+     }
+     .dom-body-text p.p-4 {
+       background-image: none;
+       font-family:'helvetica neue';
+       line-height: 75.74652862548828px;
+       font-size: 33.333335876464844px;
+       background-color: rgba(0, 0, 0, 0);
+       color: #969696;
+       font-weight: 900;
+       text-decoration: initial;
+       text-align: left;
+       text-shadow: none;
+       border: none;
+     }
+     .dom-body-text p.p-5 {
+       background-image: none;
+       font-family: oswald;
+       line-height: 36.35416793823242px;
+       font-size: 16.666667938232422px;
+       background-color: rgba(0, 0, 0, 0);
+       color: #80ccff;
+       font-weight: normal;
+       text-decoration: initial;
+       text-align: left;
+       text-shadow: none;
+       border: none;
+     }
+     .dom-body-text p.p-6 {
+       background-image: none;
+       font-family: helvetica;
+       line-height: 30.29513931274414px;
+       font-size: 13.333333969116211px;
+       background-color: rgba(0, 0, 0, 0);
+       color: #858585;
+       font-weight: normal;
+       text-decoration: initial;
+       text-align: left;
+       border: none;
+     }
+     .dom-body-text p.p-7 {
+       background-image: none;
+       font-family: oswald;
+       line-height: 54.53125px;
+       font-size: 24.44444465637207px;
+       background-color: rgba(0, 0, 0, 0);
+       color: #969696;
+       font-weight: normal;
+       text-decoration: initial;
+       text-align: left;
+       border: none;
+     }
+     .dom-body-text.dom-body-text-1 {
+       overflow: hidden;
+       width: 71px;
+       height: 1px;
+       top: 38px;
+       left: 285px;
+     }
+     #bannerText {
+       position: absolute;
+       top: 194px;
+       left: 104px;
+     }
+     .dom-body-text.dom-body-text-4 {
+       overflow: hidden;
+       width: 371px;
+       height: 53px;
+       top: 23px;
+       left: 9px;
+     }
+     .dom-body-text.dom-body-text-5 {
+       overflow: hidden;
+       width: 371px;
+       height: 53px;
+       top: 3px;
+       left: 10px;
+     }
+     .dom-body-text.dom-body-text-6 {
+       overflow: hidden;
+       width: 374px;
+       height: 120px;
+       top: 328px;
+       left: 13px;
+     }
+     .dom-body-text.dom-body-text-7 {
+       overflow: hidden;
+       width: 91px;
+       height: 42px;
+       top: 440px;
+       left: 18px;
+     }
+     .icon.icon-2 {
+       color: rgba(0, 0, 0, 0.247059);
+       font-size: 20px;
+       height: 20px;
+       width: 20px;
+       top: 450px;
+       left: 818px;
+     }
+     .icon.icon-3 {
+       color: rgba(0, 0, 0, 0.247059);
+       font-size: 20px;
+       height: 20px;
+       width: 20px;
+       top: 450px;
+       left: 1345px;
+     }
+     .icon.icon-4 {
+       color: rgba(0, 0, 0, 0.247059);
+       font-size: 20px;
+       height: 20px;
+       width: 20px;
+       top: 450px;
+       left: 1084px;
+     }
+     .icon.icon-5 {
+       color: rgba(0, 0, 0, 0.247059);
+       font-size: 20px;
+       height: 20px;
+       width: 20px;
+       top: 450px;
+       left: 790px;
+     }
+     .icon.icon-6 {
+       color: rgba(0, 0, 0, 0.247059);
+       font-size: 20px;
+       height: 20px;
+       width: 20px;
+       top: 450px;
+       left: 1056px;
+     }
+     .icon.icon-7 {
+       color: rgba(0, 0, 0, 0.247059);
+       font-size: 20px;
+       height: 20px;
+       width: 20px;
+       top: 450px;
+       left: 1317px;
+     }
+     .navbar .social-media .icon.icon-1 {
+       color: #adadad;
+       font-size: 40px;
+       height: 40px;
+       width: 40px;
+     }
+     .navbar .menuitem{
+      float: left;
+     }
+     .navbar .menuitem a.a-1 {
+       padding: 25px 15px 25px 15px;
+       color: #555555;
+       font-size: 20px;
+       font-family:"helvetica neue";
+       font-weight: 200;
+       display: inline-block;
+     }
+     .navbar .navbar-inner .nav a.a-2 {
+       font-family:"arial";
+       font-size: 0px;
+       color: #555555;
+       padding: 15px 0 25px 0;
+       font-family:"helvetica neue";
+     }
+     .navbar .navbar-inner .nav a.a-2:hover{
+        text-decoration: none
+     }
+     .sectionheader h1 small.small-2 {
+       font-family:"helvetica neue";
+       color: #e8e8e8;
+     }
+     .sectionheader h1{
+       font-family:"Marko One";
+       color: #DCDCDC;
+     }
+     .sectionheader h1.h1-3 {
+       font-family:"Marko One";
+       color: #ffffff;
+     }
+     .sectionheader h1.h1-4 {
+       font-family:"Marko One";
+       font-size: 37.77777862548828px;
+       color: #515151;
+     }
+     .sectionheader.sectionheader-9 {
+       width: 300px;
+       height: 84.89583349227905px;
+       top: 1889px;
+       left: 134px;
+     }
+     .sectionheader h1.h1-2 small.small-3 {
+       font-size: 25.55555534362793px;
+       color: #ffffff;
+     }
+     .navbar {
+       height: 70px;
+       width: 100;
+     }
+     .navbar .nav{
+          }
+     .navbar .navbar-inner {
+       -moz-box-shadow: 0px 2px 2px 0px #e8e8e8, 0px 0px 1px 0px #000000;
+       -webkit-box-shadow: 0px 2px 2px 0px #e8e8e8, 0px 0px 1px 0px #000000;
+       -o-box-shadow: 0px 2px 2px 0px #e8e8e8, 0px 0px 1px 0px #000000;
+       box-shadow: 0px 2px 2px 0px #e8e8e8, 0px 0px 1px 0px #000000;
+       height: 70px;
+     }
+     .navbar .navbar-inner .brand {
+       font-size: 40px;
+       color: #5f5f63;
+       font-weight: bold;
+       font-family:"Marko One";
+       padding: 25px 10px 10px 0;
+       height: 50px;
+       margin:0;
+     }
+     .navbar .menuitem.active a,.navbar .menuitem a:hover {
+       padding: 25px 15px 25px 15px;
+       text-shadow: 0px 0px 0px #ffffff;
+       -moz-box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
+       -webkit-box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
+       -o-box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
+       box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
+       font-family:"helvetica neue";
+       font-size: 20px;
+       font-weight: 200;
+       background-color: #e5e5e5;
+     }
+     #banner {
+       background: #80ccff;
+       border-radius: 0px;
+       margin: 0px;
+       width: 3000px;
+       height: 142px;
+       position: fixed;
+       top: 0;
+       margin-top:65px;
+       left: -131px;
+     }
+     /*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+     /*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+     /*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+     /*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+     /*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+     /*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+     .rectangle-2 {
+       background: #ffffff;
+       margin: 0px;
+       border-radius: 7.96875px;
+       border: 1px solid #333333;
+       width: 398px;
+       height: 498px;
+     }
+     .image-6 {
+       border-radius: 0px;
+       margin: 0px;
+       width: 335px;
+       height: 232px;
+       top: 95px;
+       left: 29px;
+     }
+     .flat-ok-button {
+       background: rgba(30, 255, 56, 0.470588);
+       color: #666666;
+       font-family:"Helvetica Neue";
+       font-weight: normal;
+       -moz-box-shadow: none;
+       -webkit-box-shadow: none;
+       -o-box-shadow: none;
+       box-shadow: none;
+       text-shadow: none;
+       border-radius: 5.972222328186035px;
+       font-size: 20px;
+       border: none;
+       width: 273px;
+       height: 41px;
+       top: 445px;
+       left: 113px;
+     }
+     .rectangle-3 {
+       background: #ffffff;
+       border-radius: 7.96875px;
+       margin: 0px;
+       border: 1px solid #333333;
+       width: 398px;
+       height: 498px;
+     }
+     .rectangle-4 {
+       background: #ffffff;
+       border-radius: 7.96875px;
+       margin: 0px;
+       border: 1px solid #333333;
+       width: 398px;
+       height: 498px;
+     }  
+     .social-media {
+      float: right;
+      color: #555555;
+      padding: 15px 0 25px 0;
+      font-family:"helvetica neue";
+     }
+     .heroimg {
+     }
+     .hero-header{
+     }
+     .hero-wrapper{
+      float:left;
+      width:33%;
+      text-align: center;
+     }
+     #aboutus{
+      background:#80ccff;
+      padding: 40px 0;
+     }
+     .portrait{
+      width:50px;
+     }
+     .portraitwrapper{
+      width:245px;
+      float:left;
+      text-align: center;
+    }
+    .aboutustext{
+      float:left;
+      width:430px;
+      font-family: helvetica;
+      color:#ffffff;
+      line-height: 2;
+      font-size: 25px;
+    }
+    .findgifts{
+      padding:40px 0;
+    }
+    .sectionheader{
+      margin: 25px 0;

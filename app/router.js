@@ -3,4 +3,3 @@ function requireRoute(name){
 }
 
 requireRoute('home')
-requireRoute('about')

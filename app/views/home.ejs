@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Limelight|Flamenco|Federo|Yesteryear|Josefin Sans|Spinnaker|Sansita One|Handlee|Droid Sans|Oswald|Marko One:400,300,700"
+  media="screen" rel="stylesheet" type="text/css" />
+  <style>
+  /* No content under the fixed bootstrap header. */
+  body {
+    padding-top: 70px;
+  }
+  </style>
+  <link href="/easel/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/easel/bootstrap-responsive.css" media="screen" rel="stylesheet"type="text/css" />
+  <link href="/easel/fontawesome.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/easel/style.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/easel/layout.css" media="screen" rel="stylesheet" type="text/css"/>
+  <title>BrowniePointer - A Guy's Gift Guide</title>
+</head>
+
+<body>
+  <div id="banner">
+    <script>
+    var windw = this;
+
+    $.fn.followTo = function ( pos ) {
+      var $this = this,
+      $window = $(windw);
+
+      $window.scroll(function(e){
+        if ($window.scrollTop() > pos) {
+          $this.css({
+            position: 'absolute',
+            top: pos
+          });
+        } else {
+          $this.css({
+            position: 'fixed',
+            top:  0
+          });
+        }
+      });
+    };
+
+    $('#banner').followTo(75);
+
+    </script>
+    <div class="dom-body-text dom-body-text-1" id="dom-elem-29">
+      <p class="p-1">This is body text</p>
+    </div>
+  </div>
+  <div class="dom-body-text dom-paragraph dom-body-text-2" id="bannerText">
+    <p class="p-2">A guy's gift guide.</p>
+  </div>
+  <div class="content">
+    <div class="limiter">
+      <div class="sectionheader">
+        <h1 class="h1-1">How It Works <small class="small-1"><br>Read Here</small>
+        </h1>
+      </div>
+      <div class="hero-wrapper">
+        <img class="heroimg" src="/easel/image.png" />      
+        <div class="hero-header">
+          <h1 class="h1-2">
+            <span>Gifts She Will Love By People</span> <small><br>We only post female-approved gifts. Things she'll love &nbsp;</small>
+          </h1>
+        </div>
+      </div>
+      <div class="hero-wrapper">
+        <img class="heroimg" src="/easel/image-1.png" /> <div class="hero-header">
+        <h1 class="h1-2">
+          <span>Never Forget a Special Day</span> <small><br>We scour the internet looking for great gift ideas for you to give girl</small>
+        </h1>
+      </div>
+    </div>
+    <div class="hero-wrapper">
+      <img class="heroimg" src="/easel/image-2.png" />
+      <div class="hero-header">
+        <h1 class="h1-2">
+          <span>Great Gift Ideas Made Easy</span> <small><br>We scour the internet (and beyond) to find great gifts for you to give your girl.&nbsp;<br></small>
+        </h1>
+      </div>
+    </div>  
+  </div>
+  <div id="aboutus">
+       <div class = "limiter">
+      <div class="aboutustext">  
+        <div class="sectionheader">
+        <h1 class="h1-3">Who We Are <small class="small-2"><br>Read Here</small>
+        </h1>
+      </div>
+        <p class="p-3">This site was founded for 2 reasons! To help fellow guys: Find awesome
+          gifts Without stressing. It sucks. But trying to finding gifts is frigging
+          difficult. You want to get her an awesome gift, but you don’t want to screw
+          up and get her the wrong thing. Or worse, you don’t want to forget that
+          “Ultra, special, romantic occasion.” We’re tired of guys being known for
+          getting bad gifts. And were tired of stressing out about trying to find
+          gifts. We’re going to make it easy to find great gifts with minimal work.
+          LETS DO THIS!
+          <br>
+        </p>
+      </div>
+    <div class = "portraitwrapper">
+      <img class="portrait" src="/easel/image-3.png" />
+      <div class="page-header page-header-6">
+        <h1 class="h1-2">
+          <span>Zack</span> <small class="small-3"><br>Business, crap. Other text and lame about me stuff goes here.</small>
+        </h1>
+      </div>
+        <i class="icon icon-twitter icon-2"></i>
+        <i class="icon icon-twitter icon-3"></i>
+    </div>
+    <div class = "portraitwrapper">
+      <img class="portrait" src="/easel/image-4.png" />
+ <div class="page-header page-header-6">
+        <h1 class="h1-2">
+          <span>Mauricio</span> <small class="small-3"><br>Business, crap. Other text and lame about me stuff goes here.</small>
+        </h1>
+      </div>
+      <i class="icon icon-twitter icon-4"></i>
+      <i class="icon icon-linkedin-sign icon-5"></i>
+    </div>
+    <div class = "portraitwrapper">
+      <img class="portrait" src="image-5.png" />
+ <div class="page-header page-header-7">
+        <h1 class="h1-2">
+          <span>Nick</span> <small class="small-3"><br>Business, crap. Other text and lame about me stuff goes here.</small> 
+        </h1>
+      </div>
+      <i class="icon icon-linkedin-sign icon-6"></i>
+      <i class="icon icon-linkedin-sign icon-7"></i>
+    </div>
+    </div>
+  </div>
+  
+  <% include products %>
+
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner"> 
+      <div class=limiter> 
+        <a class="brand" href="#">BrowniePointer</a>
+        <div class="active menuitem">
+          <a href="#" class="a-1">How It Works</a>
+        </div>
+        <div class = "menuitem">
+          <a href="#" class="a-1">Who We Are</a>
+        </div>
+        <div class = "menuitem">
+          <a href="#" class="a-1">Find Gifts</a>
+        </div>
+        <div class = "social-media">
+          <a href="#" class="a-2">                 
+            <i class="icon icon-twitter icon-1"></i>
+            <i class="icon icon-facebook-sign icon-1"></i>         
+            <i class="icon icon-github icon-1"></i> &nbsp;<br><br>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</body>
+
+</html>
