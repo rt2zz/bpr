@@ -1,8 +1,22 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
 <head>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="../jquery.pagescroller.js"></script>
+  <script type="text/javascript">  
+  $(document).ready(function(){
+    
+    // initiate page scroller plugin
+    $('.content').pageScroller({
+      navigation: '.navwrapper',
+      scrollOffset: -50,
+      HTML5mode: true
+    });
+          
+  });
+    
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Limelight|Flamenco|Federo|Yesteryear|Josefin Sans|Spinnaker|Sansita One|Handlee|Droid Sans|Oswald|Marko One:400,300,700"
@@ -56,7 +70,7 @@
     <p class="p-2">A guy's gift guide.</p>
   </div>
   <div class="content">
-    <div class="limiter">
+    <div class="limiter section">
       <div class="sectionheader">
         <h1 class="h1-1">How It Works <small class="small-1"><br>Read Here</small>
         </h1>
@@ -86,7 +100,7 @@
     </div>  
   </div>
   <div id="aboutus">
-       <div class = "limiter">
+       <div class = "limiter section">
       <div class="aboutustext">  
         <div class="sectionheader">
         <h1 class="h1-3">Who We Are <small class="small-2"><br>Read Here</small>
@@ -136,7 +150,7 @@
     </div>
   </div>
     <div class = "findgifts">
-    <div class = "limiter">
+    <div class = "limiter section">
     <div class="sectionheader">
       <h1 class="h1-pa4">Find Gifts <small class="small-1"><br>Things To Make Her :-)<br></small>
       </h1>
@@ -162,23 +176,25 @@
       <div class="rectangle-3"></div>
       <div class="rectangle-4"></div>
     </div>
-    <div class="navbar navbar-fixed-top">
+  </div>
+  </div>
+      <div class="navbar navbar-fixed-top">
       <div class="navbar-inner"> 
-        <div class=limiter> 
+        <div class="limiter"> 
           <a class="brand" href="#">BrowniePointer</a>
-          <div class="active menuitem"><a href="#" class="a-1">How It Works</a>
+          <div class = "navwrapper">
+          <div class = "menuitem"><a href="#" class="a-1">How It Works</a>
           </div>
           <div class = "menuitem"><a href="#" class="a-1">Who We Are</a>
           </div>
           <div class = "menuitem"><a href="#" class="a-1">Find Gifts</a>
           </div>
+        </div>
           <div class = "social-media"><a href="#" class="a-2">                 <i class="icon icon-twitter icon-1"></i>             <i class="icon icon-facebook-sign icon-1"></i>         <i class="icon icon-github icon-1"></i> &nbsp;<br><br>                     </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
 </body>
 
 </html>
