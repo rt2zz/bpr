@@ -1,0 +1,34 @@
+<div class = "findgifts">
+  <div class = "limiter">
+    <div class="sectionheader">
+      <h1 class="h1-pa4">Find Gifts <small class="small-1"><br>Things To Make Her :-)<br></small>
+      </h1>
+    </div>
+ 
+    <% products.forEach(function(product){ %>
+
+      <div class="rectangle-2">
+        <div class="dom-body-text dom-body-text-4" id="dom-elem-41">
+          <p class="p-4">
+            <%= product.name %>
+          </p>
+        </div>
+        <div class="dom-body-text dom-body-text-5" id="dom-elem-43">
+          <p class="p-5">Category</p>
+        </div>
+        <img class="image-6" src="/easel/image-6.jpeg" />
+        <div class="dom-body-text dom-body-text-6" id="dom-elem-42">
+          <p class="p-6">hops mash bittering hops hoppy. lagering terminal gravity brew bittering
+            hops. lager additive carbonation wheat beer glass. scotch ale original
+            gravity becher brewhouse bock imperial length.</p>
+        </div>
+        <div class="dom-body-text dom-body-text-7" id="dom-elem-45">
+          <p class="p-7">$199.00</p>
+        </div>
+        <button class="flat-ok-button">Buy Now</button>
+      </div>
+
+    <%  }) %>
+
+  </div>
+<div>

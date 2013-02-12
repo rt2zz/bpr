@@ -9,7 +9,7 @@ block content
     ul.products
       each product in products
         li.productContainer(pid=product._id)
-          a.update(href="product/"+product._id+"/update")= product.name
+          a.update(href="/product/"+product._id+"/update")= product.name
           .pid= product._id
 
     .section.action
