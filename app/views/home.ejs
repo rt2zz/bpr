@@ -48,10 +48,11 @@
     $('#banner').followTo(75);
     </script>
     <script>
-    $(document).ready(){
-      $('.scrollTo').click(function(){
+    $(document).ready(function(){
+      $('.scrollTo').click(function(e){
+        e.preventDefault()
         var anchor = $(this).attr('anchor')
-        var top = $('#'+anchor).position().top
+        var top = $('#'+anchor).position().top - 80
         $('html, body').animate({scrollTop:top}, 'slow');
       });
     });
@@ -67,7 +68,7 @@
     <div class="limiter">
       <div class="sectionheader">
         <span id="howWorks">
-        <h1 class="h1-1">How It Works <small class="small-1"><br>Read Here</small>
+        <h1 class="h1-1">How It Works <small class="small-2"><br>Read Here</small>
         </span>
         </h1>
       </div>
