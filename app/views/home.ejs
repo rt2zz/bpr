@@ -67,8 +67,8 @@
         if(typeof $sections[i+1] != 'undefined') lowerLimit = $($sections[i+1]).position().top - $($sections[i+1]).height()
         var upperLimit = $($sections[i]).position().top
         limits[i] = {
-          top: upperLimit - 80,
-          bot: lowerLimit - 80
+          top: upperLimit + 142,
+          bot: lowerLimit
         }
       });
 console.log(limits)
@@ -101,12 +101,11 @@ console.log(limits)
   <div class="dom-body-text dom-paragraph dom-body-text-2" id="bannerText">
     <p class="p-2">A guy's gift guide.</p>
   </div>
+    <span id="howWorks" class="section"></span>
   <div class="content">
     <div class="limiter">
       <div class="sectionheader">
-        <span id="howWorks" class="section">
         <h1 class="h1-1">How It Works <small class="small-2"><br>Read Here</small>
-        </span>
         </h1>
       </div>
       <div class="hero-wrapper">
