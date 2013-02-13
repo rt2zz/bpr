@@ -60,18 +60,18 @@
       var currentPos = 0
       var limits = []
 
-      limits[-1] = {top:0, bot:$($sections[0]).position().top}
+      limits[-1] = {top:0, bot:$($sections[0]).position().top - 80}
       
       $sections.each(function(i, e){
         var lowerLimit = $('body').height()
         if(typeof $sections[i+1] != 'undefined') lowerLimit = $($sections[i+1]).position().top - $($sections[i+1]).height()
         var upperLimit = $($sections[i]).position().top
         limits[i] = {
-          top: upperLimit,
-          bot: lowerLimit
+          top: upperLimit - 80,
+          bot: lowerLimit - 80
         }
       });
-
+console.log(limits)
       $(document).scroll(function(){
         currentPos = $(this).scrollTop()
         if(currentPos > limits[currentSection].bot){
@@ -192,7 +192,7 @@
     <div class="navbar-inner"> 
       <div class=limiter> 
         <a class="brand" href="#">BrowniePointer</a>
-       <div class = "active menuitem">
+       <div class = "menuitem">
           <a href="#howWorks" class="scrollTo a-1" anchor="howWorks">How It Works</a>
         </div>
         <div class = "menuitem">
