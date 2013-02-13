@@ -46,7 +46,15 @@
     };
 
     $('#banner').followTo(75);
-
+    </script>
+    <script>
+    $(document).ready(){
+      $('.scrollTo').click(function(){
+        var anchor = $(this).attr('anchor')
+        var top = $('#'+anchor).position().top
+        $('html, body').animate({scrollTop:top}, 'slow');
+      });
+    });
     </script>
     <div class="dom-body-text dom-body-text-1" id="dom-elem-29">
       <p class="p-1">This is body text</p>
@@ -58,7 +66,9 @@
   <div class="content">
     <div class="limiter">
       <div class="sectionheader">
+        <span id="howWorks">
         <h1 class="h1-1">How It Works <small class="small-1"><br>Read Here</small>
+        </span>
         </h1>
       </div>
       <div class="hero-wrapper">
@@ -89,7 +99,9 @@
        <div class = "limiter">
       <div class="aboutustext">  
         <div class="sectionheader">
+          <span id="aboutUs">
         <h1 class="h1-3">Who We Are <small class="small-2"><br>Read Here</small>
+          </span>
         </h1>
       </div>
         <p class="p-3">This site was founded for 2 reasons! To help fellow guys: Find awesome
@@ -142,14 +154,14 @@
     <div class="navbar-inner"> 
       <div class=limiter> 
         <a class="brand" href="#">BrowniePointer</a>
-        <div class="active menuitem">
-          <a href="#" class="a-1">How It Works</a>
+       <div class = "active menuitem">
+          <a href="#howWorks" class="scrollTo a-1" anchor="howWorks">How It Works</a>
         </div>
         <div class = "menuitem">
-          <a href="#" class="a-1">Who We Are</a>
+          <a href="#aboutUs" class="scrollTo a-1" anchor="aboutUs">Who We Are</a>
         </div>
         <div class = "menuitem">
-          <a href="#" class="a-1">Find Gifts</a>
+          <a href="#findGifts" class="scrollTo a-1" anchor="findGifts">Find Gifts</a>
         </div>
         <div class = "social-media">
           <a href="#" class="a-2">                 
@@ -157,6 +169,8 @@
             <i class="icon icon-facebook-sign icon-1"></i>         
             <i class="icon icon-github icon-1"></i> &nbsp;<br><br>
           </a>
+
+
         </div>
       </div>
   </div>
