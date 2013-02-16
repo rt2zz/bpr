@@ -27,6 +27,15 @@ block content
           .row
             label Description
             textarea(name='desc')= product.desc
+          .row
+            label Price
+            input(name='price[base]', type="textfield", value=product.price.base)= product.price.base
+          .row
+            label Base Link
+            input(name='links[base]', type="textfield", value=product.links.base)= product.links.base
+          .row
+            label Affiliate Link
+            input(name='links[affiliate]', type="textfield", value=product.links.affiliate)= product.links.affiliate
           hr
           .row
             input(name="media", type="hidden", value=JSON.stringify(product.media))
@@ -161,4 +170,21 @@ block footer
       })
 
     });
-
+  script
+    $(document).ready(function(){
+      $('input[name="links[base]"]').change(function(){
+        console.log('changed');
+        $blink = $(this).val();
+        console.log($blink.indexOf('amazon.com'));
+        if($blink.indexOf('amazon.com') > -1){
+          console.log('is amazon');
+          $aff = $('input[name="links[affiliate]"]');
+          console.log('val: ',$aff.val())
+          if($aff.val() != null){
+            console.log('gooo')
+            var link = $blink + '?tag=!{affiliates.amazon}';
+            $aff.val(link)
+          }
+        }
+      });
+    });
