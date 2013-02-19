@@ -60,7 +60,7 @@
       var currentPos = 0
       var limits = []
 
-      limits[-1] = {top:0, bot:$($sections[0]).position().top - 80}
+      limits[-1] = {top:0, bot:$($sections[0]).position().top - 90}
       
       $sections.each(function(i, e){
         var lowerLimit = $('body').height()
@@ -70,8 +70,10 @@
           top: upperLimit + 142,
           bot: lowerLimit
         }
+        //hack to fix first section
+        if(i==0) limits[0].top = upperLimit -120;
       });
-console.log(limits)
+
       $(document).scroll(function(){
         currentPos = $(this).scrollTop()
         if(currentPos > limits[currentSection].bot){
@@ -101,9 +103,10 @@ console.log(limits)
   <div class="dom-body-text dom-paragraph dom-body-text-2" id="bannerText">
     <p class="p-2">A guy's gift guide.</p>
   </div>
-    <span id="howWorks" class="section"></span>
   <div class="content">
     <div class="limiter">
+      <span id="howWorks" class="section"></span>
+
       <div class="sectionheader">
         <h1 class="h1-1">How It Works <small class="small-2"><br>Read Here</small>
         </h1>
@@ -190,7 +193,7 @@ console.log(limits)
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner"> 
       <div class=limiter> 
-        <a class="brand" href="#">BrowniePointer</a>
+        <a id="home" class="brand scrollTo" anchor="home" href="#">BrowniePointer</a>
        <div class = "menuitem">
           <a href="#howWorks" class="scrollTo a-1" anchor="howWorks">How It Works</a>
         </div>

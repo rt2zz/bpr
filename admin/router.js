@@ -4,3 +4,4 @@ function requireRoute(name){
 
 requireRoute('products/crud')
 requireRoute('media')
+requireRoute('products/batch')
