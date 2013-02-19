@@ -1,6 +1,7 @@
 var app = require('../../app.js')
 var _ = require('lodash')
-var imageUpload = require('../../logic/imageUploader.js');
+var imageUpload = require('../../logic/imageUploader.js')
+var config = require('../../logic/config.js')
 
 var Product = require('../../logic/db/product.js')
 
@@ -9,6 +10,7 @@ app.get('/products/create', function(req, res){
   var product = Product.new()
   res.locals.isNew = 1
   res.locals.product = product
+  res.locals.affiliates = config.affiliates
   res.render('product.save.jade')
 })
 
@@ -16,7 +18,6 @@ app.post('/products/update', function(req, res){
   var product = req.body
   var valid = Product.validate(product)
   var media = JSON.parse(req.body.media);
-  console.log('update')
 
   isNew = req.body.isNew
   delete req.body.isNew
@@ -60,7 +61,7 @@ app.get('/product/:id', function(req, res){
 app.get('/product/:id/update', function(req, res){
   Product.findById(req.params.id, function(err, product){
     res.locals.product = product
-    console.log('MEDIA:', product.media)
+    res.locals.affiliates = config.affiliates
     res.render('product.save.jade')
   })
 })

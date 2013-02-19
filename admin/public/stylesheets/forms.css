@@ -36,6 +36,9 @@ textarea {
 input[readonly] {
   background: #eee;
 }
+input[type="textfield"] {
+  width: 390px;
+}
 .thumbs {
   overflow: hidden;
   margin-top: 10px;

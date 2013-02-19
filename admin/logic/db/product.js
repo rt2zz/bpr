@@ -16,6 +16,13 @@ db.bind('product', {
       created: data.created,
       name: data.name,
       desc: data.desc,
+      links:{
+        base:'',
+        affiliate:''
+      },
+      price:{
+        base: null
+      },
       media: []
     }
   },

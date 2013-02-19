@@ -10,5 +10,8 @@ module.exports = {
   },
   ssl:{
     path:'./logic/ssl/'
+  },
+  affiliates:{
+    amazon:'browniepoin05-20'
   }
 }
