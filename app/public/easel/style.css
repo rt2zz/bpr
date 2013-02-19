@@ -169,6 +169,10 @@
        font-size: 40px;
        height: 40px;
        width: 40px;
+       -webkit-transition-duration: .5s;
+     }    
+     .navbar .social-media .icon:hover {
+       color: #333333;
      }
      .navbar .menuitem{
       float: left;
@@ -236,9 +240,14 @@
        color: #5f5f63;
        font-weight: bold;
        font-family:"Marko One";
-       padding: 25px 10px 10px 0;
+       padding: 25px 50px 10px 0;
        height: 50px;
        margin:0;
+       -webkit-transition-duration: .5s;
+
+     }
+      .navbar .navbar-inner .brand:hover {
+       color: #2232fc;
      }
      .navbar .menuitem.active a,.navbar .menuitem a:hover {
        padding: 25px 15px 25px 15px;
@@ -251,9 +260,10 @@
        font-size: 20px;
        font-weight: 200;
        background-color: #e5e5e5;
+       -webkit-transition-duration: .5s;
      }
      #banner {
-       background: #80ccff;
+       background: #b8b8b8;
        border-radius: 0px;
        margin: 0px;
        width: 100%;
@@ -343,9 +353,6 @@ http://fortawesome.github.com/Font-Awesome/
       padding: 32px 0 0px 0;
       font-family:"helvetica neue";
      }
-     .social-media:hover {
-      color: #333333;
-     }
      .heroimg {
      }
      .hero-header{
@@ -356,7 +363,7 @@ http://fortawesome.github.com/Font-Awesome/
       text-align: center;
      }
      #aboutus{
-      background:#80ccff;
+      background:#b8b8b8;
       padding: 40px 0;
      }
      .portrait{
