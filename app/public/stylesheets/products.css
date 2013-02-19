@@ -1,0 +1,95 @@
+.ratingsbox{
+  padding: 10px;
+  border-radius: 15px;
+}
+.ratingsbox p{
+  margin: 0;
+
+}
+.gifttitle {
+  font-family:"Oswald";
+  font-size: 40px;
+  font-weight: normal;
+  margin: 5px;
+}
+.ratingsheading {
+  font-family: "Lato";
+  font-size: 20;
+  font-weight: normal;
+  margin: 0;
+  ;
+}
+.buynow {
+  padding: 0px;
+  font-family:"Helvetica Neue"; 
+  text-align: center;
+  font-weight: normal;
+}
+.price{
+  color: #969696;
+  font-family: "Oswald";
+  font-size: 50px;
+  display: inline-block;
+  float: right;
+  margin: 5px;
+}
+.ratingnumber {
+  overflow: hidden;
+  font-family: "Oswald";
+  color: #969696;
+  font-size: 22px;
+  padding: 8px 17px 10px 0px;
+  display: inline-block;
+}
+.icon.icon-1 {
+  font-size: 27.77777862548828px;
+  line-height: 0em;
+  display: inline-block;
+  margin: 0px 10px;
+}
+.icon.icon-2 {
+  font-size: 27.77777862548828px;
+  line-height: 0em;
+  margin: 0px 10px;
+  display: inline-block;  
+}
+.giftbox {
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 7.934028148651123px;
+  margin: 0px;
+  border: 4px solid #333333;
+  width: 370px;
+  float: left;
+  margin: 10px 5px;
+;
+}
+.giftimage {
+  border-radius: 15px;
+  text-align: center;
+  padding: 5px;
+  width: 388px;
+}
+.description {
+ margin: 10px;
+ font-family: "Helvetic Neue", Helvetica, Arial;
+ color: #858585;
+}
+ .flat-ok-button {
+  background: rgba(30, 255, 56, 0.470588);
+  color: #666666;
+  font-family:"Helvetica Neue"; 
+  text-align: center;
+  font-weight: normal;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 7px;
+  font-size: 25px;
+  border: none;
+  width: 381px;
+  height: 47px;
+  margin: 8px 8px;
+}

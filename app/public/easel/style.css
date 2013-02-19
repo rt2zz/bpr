@@ -340,8 +340,11 @@ http://fortawesome.github.com/Font-Awesome/
      .social-media {
       float: right;
       color: #555555;
-      padding: 15px 0 25px 0;
+      padding: 32px 0 0px 0;
       font-family:"helvetica neue";
+     }
+     .social-media:hover {
+      color: #333333;
      }
      .heroimg {
      }
@@ -374,6 +377,7 @@ http://fortawesome.github.com/Font-Awesome/
     }
     .findgifts{
       padding:40px 0;
+
     }
     .sectionheader{
       margin: 25px 0;
