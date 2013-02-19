@@ -13,5 +13,8 @@ module.exports = {
   },
   affiliates:{
     amazon:'browniepoin05-20'
+  },
+  admin:{
+    getProduct:'12.0.0.1:4000/product/'
   }
 }

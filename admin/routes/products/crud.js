@@ -52,9 +52,10 @@ app.post('/products/update', function(req, res){
   }
 })
 
-//READ
 app.get('/product/:id', function(req, res){
-  res.render('')  
+  Product.findById(req.params.id, function(err, product){
+    res.json(product)
+  })
 })
 
 //UPDATE
