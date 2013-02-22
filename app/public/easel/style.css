@@ -273,6 +273,16 @@
        margin-top:65px;
        left: 0;
      }
+     .formbanner {
+       background: #b8b8b8;
+       border-radius: 0px;
+       margin: 0px;
+       width: 100%;
+       height: 142px;
+       top: 0;
+       margin-top:0px;
+       left: 0;
+     }
      /*
 Using this css requires Font Awesome:
 http://fortawesome.github.com/Font-Awesome/
@@ -396,4 +406,55 @@ http://fortawesome.github.com/Font-Awesome/
   height:30px;
   display:block;
   margin:0 auto;
+
+#emailform{
+  background:#666666;
+  padding: 10px 0px;
+ }
+ form .emailfield{
+  margin: 10px 10px;
+  font-size: 40px; 
+  font-family: "Lato"; 
+  color:#aaa; 
+  width:500px;
+  height: 50px;
+  float: right;
+ }
+ form .emailfield:focus { 
+  border-color: #beff1f;
+  box-shadow: 0 0 10px 5px #beff1f;
+}
+ .emailsectiontext{
+  float:left;
+  width:610px;
+  font-family: "helvetica neue";
+  color:#ffffff;
+  line-height: 2;
+  font-size: 25px;
+  margin: 1px;
+}
+  .emailbutton {
+  background: rgba(30, 255, 56, 0.470588);
+  float:right;
+  color: #666666;
+  font-family:"Helvetica Neue"; 
+  text-align: center;
+  font-weight: normal;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 7px;
+  font-size: 25px;
+  border: none;
+  width: 400px;
+  height: 60px;
+  margin: 8px 64px;
+  -webkit-transition-duration: .3s;
+}  
+  .emailbutton:hover {
+  background: #beff1f;
+  -webkit-transition-duration: .3s;
+}
 }
