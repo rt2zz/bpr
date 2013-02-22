@@ -746,3 +746,10 @@ http://fortawesome.github.com/Font-Awesome/
     top: 1017px;
     left: 1274px;
   }
+
+  #productsBottom{
+    background:url('/images/loading.gif') no-repeat;
+    width:30px;
+    height:30px;
+    display:block;
+  }

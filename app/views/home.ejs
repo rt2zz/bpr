@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
 <head>
   <meta charset="utf-8" />
@@ -19,33 +18,38 @@
   <link href="/easel/style.css" media="screen" rel="stylesheet" type="text/css"/>
   <link href="/easel/layout.css" media="screen" rel="stylesheet" type="text/css"/>
   <link href="/stylesheets/products.css" media="screen" rel="stylesheet" type="text/css"/>"
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.masonry.min.js"></script>
+  <script type="text/javascript" src="/javascripts/handlebars.js"></script>
+
   <title>BrowniePointer - A Guy's Gift Guide</title>
 </head>
 <body>
   <div id="banner">
     <script>
-    var windw = this;
+      var windw = this;
 
-    $.fn.followTo = function ( pos ) {
-      var $this = this,
-      $window = $(windw);
+      $.fn.followTo = function ( pos ) {
+        var $this = this,
+        $window = $(windw);
 
-      $window.scroll(function(e){
-        if ($window.scrollTop() > pos) {
-          $this.css({
-            position: 'absolute',
-            top: pos
-          });
-        } else {
-          $this.css({
-            position: 'fixed',
-            top:  0
-          });
-        }
-      });
-    };
+        $window.scroll(function(e){
+          if ($window.scrollTop() > pos) {
+            $this.css({
+              position: 'absolute',
+              top: pos
+            });
+          } else {
+            $this.css({
+              position: 'fixed',
+              top:  0
+            });
+          }
+        });
+      };
 
-    $('#banner').followTo(75);
+      $('#banner').followTo(75);
     </script>
     <script>
     $(document).ready(function(){
@@ -96,6 +100,73 @@
       });
     });
     </script>
+    <script>
+
+      var working = 0;
+      var productCursor = 0;
+
+      
+      $(document).ready(function(){
+        var $container = $('#productsList');
+
+        var source   = $("#productTemplate").html();
+        var template = Handlebars.compile(source);
+        var products = $.parseJSON(data.products)
+        products.forEach(function(product, i){
+          productCursor++;
+          $container.append(template(product));
+        })
+
+        function infiniteHandler($container){
+          return function(data){
+            console.log(data.length);
+            if(data.length == 0){
+              $('#productsBottom').remove();
+              clearInterval(infinite);
+            }
+            data.forEach(function(product, i){
+              productCursor++;
+              var box = $(template(product));
+              $container.append( box ).masonry( 'appended', box );  
+            });
+            $container.imagesLoaded(function(){
+              $container.masonry('reload');
+            });
+            working = working-1;
+          }
+        }
+
+        $container.masonry({
+          itemSelector : '.gbwrap',
+          columnWidth : 400
+        });
+
+        $container.imagesLoaded(function(){
+          $container.masonry('reload');
+        });
+
+        var infinite = setInterval(function(){
+          if(working == 0){
+            var productPos = $('#productsBottom').position().top;
+            var top = $(document).scrollTop();
+            if(productPos < top+$(window).height()){
+              working = 2;
+              setTimeout(function(){
+                console.log(working)
+                working = working-1;
+              }, 2000);
+
+              $.ajax({
+                url: '/api/1/products',
+                data: {limit:4, skip:productCursor},
+                success: infiniteHandler($container),
+                dataType: 'json'
+              });
+            }
+          }
+        }, 300);
+      });
+    </script>
     <div class="dom-body-text dom-body-text-1" id="dom-elem-29">
       <p class="p-1">This is body text</p>
     </div>
@@ -136,7 +207,7 @@
     </div>  
   </div>
   <div id="aboutus">
-       <div class = "limiter">
+    <div class = "limiter">
       <div class="aboutustext">  
         <div class="sectionheader">
           <span id="aboutUs" class="section">

@@ -53,16 +53,20 @@
   margin: 0px 10px;
   display: inline-block;  
 }
+.gbwrap{
+  float:left;
+  margin:0;
+  width:400px;
+}
 .giftbox {
-  overflow: hidden;
+  overflow:hidden;
   background: #ffffff;
-  border-radius: 7.934028148651123px;
+  border-radius: 8px;
   margin: 0px;
   border: 4px solid #333333;
   width: 370px;
   float: left;
   margin: 10px 5px;
-;
 }
 .giftimage {
   border-radius: 15px;
@@ -97,3 +101,18 @@
 .flat-ok-button:hover{
   background: rgba(255, 136, 12, 0.458824);
 }
+ 
+/*.products {
+    -moz-column-count: 3;
+    -moz-column-gap: 0px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 0px;
+    column-count: 3;
+    column-gap: 0px;
+}
+ 
+.products .giftboxwrapper{
+    display: inline-block;
+    margin-bottom: 0px;
+    width: 100%;
+}*/

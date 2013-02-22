@@ -388,3 +388,12 @@ http://fortawesome.github.com/Font-Awesome/
     }
     .sectionheader{
       margin: 25px 0;
+    }
+
+#productsBottom{
+  background:url('/images/loading.gif') no-repeat;
+  width:30px;
+  height:30px;
+  display:block;
+  margin:0 auto;
+}
