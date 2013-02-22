@@ -406,11 +406,13 @@ http://fortawesome.github.com/Font-Awesome/
   height:30px;
   display:block;
   margin:0 auto;
+}
 
 #emailform{
   background:#666666;
   padding: 10px 0px;
  }
+
  form .emailfield{
   margin: 10px 10px;
   font-size: 40px; 
