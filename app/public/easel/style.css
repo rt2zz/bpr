@@ -404,7 +404,7 @@ http://fortawesome.github.com/Font-Awesome/
       padding: 10px 0px;
      }
      form .emailfield{
-      margin: 10px 0px;
+      margin: 10px 10px;
       font-size: 40px; 
       font-family: "Lato"; 
       color:#aaa; 
@@ -412,14 +412,19 @@ http://fortawesome.github.com/Font-Awesome/
       height: 50px;
       float: right;
      }
+     form .emailfield:focus { 
+      border-color: #beff1f;
+      box-shadow: 0 0 10px 5px #beff1f;
+    }
      .emailsectiontext{
       float:left;
       width:610px;
-      font-family: helvetica;
+      font-family: "helvetica neue";
       color:#ffffff;
       line-height: 2;
       font-size: 25px;
-     }
+      margin: 1px;
+    }
       .emailbutton {
       background: rgba(30, 255, 56, 0.470588);
       float:right;
@@ -435,8 +440,12 @@ http://fortawesome.github.com/Font-Awesome/
       border-radius: 7px;
       font-size: 25px;
       border: none;
-      width: 500px;
+      width: 400px;
       height: 60px;
-      margin: 8px 8px;
-      -webkit-transition: .3s;
+      margin: 8px 64px;
+      -webkit-transition-duration: .3s;
+    }  
+      .emailbutton:hover {
+      background: #beff1f;
+      -webkit-transition-duration: .3s;
 }
