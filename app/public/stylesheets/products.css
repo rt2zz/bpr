@@ -11,6 +11,11 @@
   font-size: 40px;
   font-weight: normal;
   margin: 5px;
+  color: #b5b5b5;
+  -webkit-transition-duration: .3s;
+}
+.gifttitle:hover {
+  color: #666666;
 }
 .ratingsheading {
   font-family: "Lato";
@@ -58,7 +63,7 @@
   background: #ffffff;
   border-radius: 7.934028148651123px;
   margin: 0px;
-  border: 4px solid #333333;
+  border: 4px solid #e0e0e0;
   width: 370px;
   float: left;
   margin: 10px 5px;

@@ -12,7 +12,9 @@
     <% if(typeof product.media[0] != "undefined") path = "http://"+product.media[0].path
     else{path=""} %>
     <div class="giftbox">
+       <a href = "<%= product.links.affiliate %>" target="_blank">
       <h2 class="gifttitle"><%= product.name %></h2>
+    </a>
       <img class="giftimage" src= "<%= path %>" />
       <div class="description"><%= product.desc %></div>
       <div class="ratingsbox">
