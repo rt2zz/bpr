@@ -20,9 +20,9 @@
        font-size: 50px;
        color: #ffffff;
      }
-     .dom-body-text p.p-3 {
+     .p-3 {
        font-family: helvetica;
-       font-size: 25px;
+       font-size: 20  px;
        line-height: 2.0;
        color: #ffffff;
      }
@@ -383,10 +383,11 @@ http://fortawesome.github.com/Font-Awesome/
       width:245px;
       float:left;
       text-align: center;
+      margin: 0 77px;
     }
     .aboutustext{
       float:left;
-      width:430px;
+      width:100;
       font-family: helvetica;
       color:#ffffff;
       line-height: 2;
@@ -433,7 +434,7 @@ http://fortawesome.github.com/Font-Awesome/
   color:#ffffff;
   line-height: 2;
   font-size: 25px;
-  margin: 1px;
+  margin: 22px 0 0 0;
 }
   .emailbutton {
   background: rgba(30, 255, 56, 0.470588);
@@ -459,4 +460,7 @@ http://fortawesome.github.com/Font-Awesome/
   background: #beff1f;
   -webkit-transition-duration: .3s;
 }
+  .submit {
+    color: #ffffff;
+  }
 }
