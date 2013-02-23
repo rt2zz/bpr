@@ -2,7 +2,11 @@
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-
+}
+.emaillimiter{
+  max-width: 1050px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .right{
