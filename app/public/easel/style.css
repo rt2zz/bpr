@@ -500,6 +500,7 @@ http://fortawesome.github.com/Font-Awesome/
     text-shadow: 0 0 10px #ffffff;
     color: #ffffff;
   }
+  
 input::-webkit-input-placeholder {
   color: red;
 }
