@@ -208,15 +208,12 @@
   </div>
   <div id="emailform">
   <div class="emaillimiter">
-    <div class="emailsectiontext">
-    <p class="p-3">Enter your email address or login with Facebook to stay in the loop with BrowniePointer.
-    </p>
-  </div>
-    <form id ="email">
+    <form id ="email" action="/subscribe" method="POST">
   <div>
-    <input type="text" class="emailfield" placeholder="Stay in the loop.">
+    <input type="text" class="emailfield" placeholder="Stay in the loop." name="email">
       <button class="emailbutton">
     <h3 class="submit">Submit</h3></button>
+    <span class="OR">or</span>
       <button class="facebook-login-btb">
         <a class = "facebooktext" href="#">login with <span>facebook</span></a>
       </button>

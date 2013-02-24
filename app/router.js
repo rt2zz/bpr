@@ -3,3 +3,5 @@ function requireRoute(name){
 }
 
 requireRoute('home')
+
+requireRoute('email')

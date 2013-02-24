@@ -412,14 +412,14 @@ http://fortawesome.github.com/Font-Awesome/
 
 #emailform{
   background:#666666;
-  padding: 10px 0px;
+  padding: 0 0px;
  }
 
  form .emailfield{
   margin: 20px 0px;
   font-size: 40px; 
   font-family: "Lato";
-  width:569px;
+  width:628px;
   height: 50px;
   float: left;
   line-height: 1.2em;
@@ -458,6 +458,7 @@ http://fortawesome.github.com/Font-Awesome/
   height: 60px;
   -webkit-transition-duration: .3s;
   display: inline-block;
+  margin-left:0;
 
 }  
   .emailbutton:hover {
@@ -473,7 +474,7 @@ http://fortawesome.github.com/Font-Awesome/
       -webkit-transition-duration: .3s;
   }
   .facebooktext:hover{
-    text-shadow: 0 0 10px #ffffff;
+    text-shadow: 0 0 20px #ffffff;
     color: #ffffff;
   }
   .facebook-login-btb {
@@ -500,16 +501,21 @@ http://fortawesome.github.com/Font-Awesome/
     text-shadow: 0 0 10px #ffffff;
     color: #ffffff;
   }
-  
+  .OR {
+    color: #ffffff;
+    font-size: 43px;
+    font-family: "Grand Hotel";
+    margin: 0 10px;
+  }
 input::-webkit-input-placeholder {
-  color: red;
+  color: #DCDCDC;
 }
 input:-moz-placeholder { /* Firefox 18- */
-  color: red;  
+  color: #DCDCDC;  
 }
 input::-moz-placeholder {  /* Firefox 19+ */
-   color: red;  
+   color: #DCDCDC;  
 }
 input:-ms-input-placeholder {  
-   color: red;  
+   color: #DCDCDC;  
 }
