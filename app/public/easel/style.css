@@ -418,16 +418,17 @@ http://fortawesome.github.com/Font-Awesome/
  form .emailfield{
   margin: 20px 0px;
   font-size: 40px; 
-  font-family: "Lato"; 
-  color:#aaa; 
+  font-family: "Lato";
   width:569px;
   height: 50px;
   float: left;
+  line-height: 1.2em;
  }
  form .emailfield:focus { 
   border-color: #beff1f;
   box-shadow: 0 0 10px 10px #beff1f;
-  box-shadow: inset 0 3px 8px rgba(0,0,0,.64);
+  box-shadow: inset 0 0 10px 0 rgba(0,0,0,.74);
+  color:#aaa;   
 }
  .emailsectiontext{
   float:left;
@@ -499,3 +500,15 @@ http://fortawesome.github.com/Font-Awesome/
     text-shadow: 0 0 10px #ffffff;
     color: #ffffff;
   }
+input::-webkit-input-placeholder {
+  color: red;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: red;  
+}
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+input:-ms-input-placeholder {  
+   color: red;  
+}
