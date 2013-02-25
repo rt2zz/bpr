@@ -268,7 +268,7 @@
        -webkit-transition-duration: .5s;
      }
      #banner {
-       background: #b8b8b8;
+       background: #3399dd;
        border-radius: 0px;
        margin: 0px;
        width: 100%;
@@ -276,7 +276,7 @@
        position: fixed;
        top: 0;
        margin-top:48px;
-       left: 0;
+       left: 0;  
      }
      .formbanner {
        background: #b8b8b8;
@@ -369,13 +369,15 @@ http://fortawesome.github.com/Font-Awesome/
       font-family:"helvetica neue";
      }
      .heroimg {
+      width: 150px;
      }
      .hero-header{
      }
      .hero-wrapper{
       float:left;
-      width:33%;
+      width:27%;
       text-align: center;
+      margin: 0 0 75px 71px;
      }
      #aboutus{
       background:#b8b8b8;
