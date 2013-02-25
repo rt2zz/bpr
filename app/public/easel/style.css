@@ -380,6 +380,11 @@ http://fortawesome.github.com/Font-Awesome/
       margin: 0 0 75px 71px;
       font-family: "Lato"
      }
+     .portrait{
+      overflow:hidden; 
+      border-radius:400px;
+      width:100px;
+     }
      #aboutus{
       background:#b8b8b8;
       padding: 40px 0;
