@@ -537,3 +537,11 @@ input::-moz-placeholder {  /* Firefox 19+ */
 input:-ms-input-placeholder {  
    color: #DCDCDC;  
 }
+
+ .circlemask{
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+    overflow:hidden;
+    margin:0 auto;
+  }

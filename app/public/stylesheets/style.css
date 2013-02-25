@@ -753,3 +753,10 @@ http://fortawesome.github.com/Font-Awesome/
     height:30px;
     display:block;
   }
+
+  .circlmask{
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+    overflow:hidden;
+  }
