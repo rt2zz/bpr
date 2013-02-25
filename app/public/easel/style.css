@@ -416,9 +416,12 @@ http://fortawesome.github.com/Font-Awesome/
   display:block;
   margin:0 auto;
 }
-
+.emailwrapper{
+  background-image:url('/images/background-ambient.png');
+  background-attachment:fixed;
+  background-position:0 100%; 
+}
 #emailform{
-  background:#666666;
   padding: 0 0px;
  }
 
@@ -451,7 +454,7 @@ http://fortawesome.github.com/Font-Awesome/
   padding:0 20px;
 }
   .emailbutton {
-  background: rgba(30, 255, 56, 0.470588);
+  background: rgba(30, 255, 56, 0.35);
   color: #666666;
   font-family:"Helvetica Neue"; 
   text-align: center;
