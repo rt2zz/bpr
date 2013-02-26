@@ -20,6 +20,7 @@
   <title>BrowniePointer - A Guy's Gift Guide</title>
 </head>
 <body>
+  <% include facebook %>
   <div id="banner">
     <script>
       var windw = this;
@@ -115,7 +116,6 @@
 
         function infiniteHandler($container){
           return function(data){
-            console.log(data.length);
             if(data.length == 0){
               $('#productsBottom').remove();
               clearInterval(infinite);
@@ -148,7 +148,6 @@
             if(productPos < top+$(window).height()){
               working = 2;
               setTimeout(function(){
-                console.log(working)
                 working = working-1;
               }, 2000);
 

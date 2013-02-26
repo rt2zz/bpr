@@ -25,7 +25,6 @@
 </script>
 <script>
   Handlebars.registerHelper('imgPath', function(media) {
-    console.log(media)
     if(typeof media[0] != 'undefined') return 'http://'+media[0].path;
     else return '';
   });
