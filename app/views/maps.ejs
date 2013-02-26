@@ -1,0 +1,59 @@
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC0eGCEeVrZLUpVBvxuAiNp5BdXq1loK0&sensor=false"></script>
+  <script type="text/javascript">
+      var map;
+      var brooklyn = new google.maps.LatLng(34.016, -118.495);
+
+      var MY_MAPTYPE_ID = 'custom_style';
+
+      function initialize() {
+
+        var featureOpts = [
+  {
+    "stylers": [
+      { "visibility": "simplified" },
+      { "gamma": 1.02 },
+      { "saturation": -100 }
+    ]
+  },{
+    "featureType": "transit",
+    "stylers": [
+      { "hue": "#003bff" }
+    ]
+  },{
+  }
+]
+
+        var mapOptions = {
+          zoom: 12,
+          center: brooklyn,
+          mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+          },
+          mapTypeId: MY_MAPTYPE_ID
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+            mapOptions);        
+  var myLatLng = new google.maps.LatLng(34.016, -118.495);
+
+        var styledMapOptions = {
+          name: 'BrowniePointer'
+        };
+
+        var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+
+        map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+          var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title:"Hello World!"
+      })
+      }
+
+      $(document).ready(function(){
+        initialize()
+      })  
+    
+
+
+  </script>
