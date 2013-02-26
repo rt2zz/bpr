@@ -16,10 +16,82 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="/javascripts/jquery.masonry.min.js"></script>
   <script type="text/javascript" src="/javascripts/handlebars.js"></script>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC0eGCEeVrZLUpVBvxuAiNp5BdXq1loK0&sensor=false"></script>
+  <script type="text/javascript">
+      var map;
+      var brooklyn = new google.maps.LatLng(34.016, -118.495);
+
+      var MY_MAPTYPE_ID = 'custom_style';
+
+      function initialize() {
+
+        var featureOpts = [
+  {
+    "featureType": "road",
+    "stylers": [
+      { "hue": "#3c00ff" },
+      { "lightness": 1 },
+      { "gamma": 1.2 },
+      { "saturation": -80 }
+    ]
+  },{
+    "featureType": "water",
+    "stylers": [
+      { "hue": "#3399dd" },
+      { "saturation": 100 }
+    ]
+  },{
+    "featureType": "poi.park",
+    "stylers": [
+      { "hue": "#00ff66" },
+      { "saturation": -80 }
+    ]
+  },{
+    "featureType": "landscape.man_made",
+    "stylers": [
+      { "hue": "#0033ff" },
+      { "saturation": -80 }
+    ]
+  },{
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      { "saturation": -80 },
+      { "gamma": 2.49 },
+      { "lightness": -19 },
+      { "hue": "#4400ff" }
+    ]
+  },{
+    "featureType": "road.highway"  }
+]
+
+        var mapOptions = {
+          zoom: 12,
+          center: brooklyn,
+          mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+          },
+          mapTypeId: MY_MAPTYPE_ID
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+            mapOptions);        
+  var myLatLng = new google.maps.LatLng(34.016, -118.495);
+
+        var styledMapOptions = {
+          name: 'BrowniePointer'
+        };
+
+        var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+
+        map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+      }
+  </script>
 
   <title>BrowniePointer - A Guy's Gift Guide</title>
 </head>
-<body>
+<body onload="initialize()">
   <div id="banner">
     <script>
       var windw = this;
@@ -42,6 +114,7 @@
           }
         });
       };
+
 
       $('#banner').followTo(75);
     </script>
@@ -268,8 +341,15 @@
       <i class="icon icon-linkedin-sign icon-6"></i>
       <i class="icon icon-linkedin-sign icon-7"></i>
     </div>
+    <span id="contactus" class="section"></span>
+      <div class="sectionheader">
+        <h1 class="h1-1">Contact Us<small class="small-2"><br>Twitter: @BrowniePointer<br>Phone: (800)388-4555<br>Facebook<br>Email: info@browniepointer.com</small>
+        </h1>
+         </div>
+      </div>
     </div>
   </div>
+<div id="map_canvas" style="background-color: rgb(369, 227, 223); overflow: hidden; -webkit-transform: translateZ(0);"></div>
   
   <% include products %>
 
