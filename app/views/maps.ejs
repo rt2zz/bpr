@@ -43,9 +43,13 @@
         var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
 
         map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+   
+var icon = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_spin&chld=2.2|30|3399dd|14|_||");
+
           var marker = new google.maps.Marker({
-      position: myLatlng,
+      position: myLatLng,
       map: map,
+      icon: icon,
       title:"Hello World!"
       })
       }

@@ -551,3 +551,22 @@ input:-ms-input-placeholder {  
     height: 300px;
 
   }
+  .contacticon{
+    width: 80px;
+    opacity: .2;
+    -webkit-transition-duration: .3s;
+  }
+    .contacticon:hover{
+    opacity: .8;
+  }
+  .contactlimiter{  
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 300px;
+  }
+
+  .aboutuslimiter{
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
