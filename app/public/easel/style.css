@@ -564,9 +564,7 @@ input:-ms-input-placeholder {  
     overflow: hidden;
     max-width: 300px;
   }
-
-  .aboutuslimiter{
-    max-width: 600px;
-    margin: 0 auto;
-    overflow: hidden;
+  .picturwrapper{
+       display: inline-block;
+    
   }
