@@ -17,153 +17,11 @@
   <script type="text/javascript" src="/javascripts/jquery.masonry.min.js"></script>
   <script type="text/javascript" src="/javascripts/handlebars.js"></script>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <% include maps %>
   <title>BrowniePointer - A Guy's Gift Guide</title>
 </head>
 <body>
   <div id="banner">
-    <script>
-      var windw = this;
 
-      $.fn.followTo = function ( pos ) {
-        var $this = this,
-        $window = $(windw);
-
-        $window.scroll(function(e){
-          if ($window.scrollTop() > pos) {
-            $this.css({
-              position: 'absolute',
-              top: pos
-            });
-          } else {
-            $this.css({
-              position: 'fixed',
-              top:  0
-            });
-          }
-        });
-      };
-
-      $('#banner').followTo(75);
-    </script>
-    <script>
-    $(document).ready(function(){
-      $('.scrollTo').click(function(e){
-        e.preventDefault()
-        var anchor = $(this).attr('anchor')
-        var top = $('#'+anchor).position().top - 80
-        $('html, body').animate({scrollTop:top}, 'slow');
-      });
-      $sections = $('.section')
-      var currentSection = -1
-      var currentPos = 0
-      var limits = []
-
-      limits[-1] = {top:0, bot:$($sections[0]).position().top - 90}
-      
-      $sections.each(function(i, e){
-        var lowerLimit = $('body').height()
-        if(typeof $sections[i+1] != 'undefined') lowerLimit = $($sections[i+1]).position().top - $($sections[i+1]).height()
-        var upperLimit = $($sections[i]).position().top
-        limits[i] = {
-          top: upperLimit +180,
-          bot: lowerLimit
-        }
-        //hack to fix first section
-        if(i==0) limits[0].top = upperLimit -120;
-      });
-
-      limits[limits.length-1].bot = 999999999999;
-
-      $(document).scroll(function(){
-        currentPos = $(this).scrollTop()
-        if(currentPos > limits[currentSection].bot){
-          anchor = $($sections[currentSection+1]).attr('id')
-          $('.scrollTo').parent().removeClass('active') 
-          $('.scrollTo[anchor="'+anchor+'"]').parent().addClass('active')
-          if(typeof limits[currentSection+1] != 'undefined'){
-            currentSection = currentSection+1
-          }
-        } 
-        if(currentPos < limits[currentSection].top){
-          anchor = $($sections[currentSection-1]).attr('id')
-          $('.scrollTo').parent().removeClass('active')
-          $('.scrollTo[anchor="'+anchor+'"]').parent().addClass('active')
-          if(typeof limits[currentSection-1] != 'undefined'){
-            currentSection = currentSection-1
-          }
-        }
-
-      });
-    });
-    </script>
-    <script>
-
-      var working = 0;
-      var productCursor = 0;
-
-      
-      $(document).ready(function(){
-        var $container = $('#productsList');
-
-        var source   = $("#productTemplate").html();
-        var template = Handlebars.compile(source);
-        var products = $.parseJSON(data.products)
-        products.forEach(function(product, i){
-          productCursor++;
-          $container.append(template(product));
-        })
-
-        function infiniteHandler($container){
-          return function(data){
-            console.log(data.length);
-            if(data.length == 0){
-              $('#productsBottom').remove();
-              clearInterval(infinite);
-            }
-            data.forEach(function(product, i){
-              productCursor++;
-              var box = $(template(product));
-              $container.append( box ).masonry( 'appended', box );  
-            });
-            $container.imagesLoaded(function(){
-              $container.masonry('reload');
-            });
-            working = working-1;
-          }
-        }
-
-        $container.masonry({
-          itemSelector : '.gbwrap',
-          columnWidth : 400
-        });
-
-        $container.imagesLoaded(function(){
-          $container.masonry('reload');
-        });
-
-        var infinite = setInterval(function(){
-          if(working == 0){
-            var productPos = $('#productsBottom').position().top;
-            var top = $(document).scrollTop();
-            if(productPos < top+$(window).height()){
-              working = 2;
-              setTimeout(function(){
-                console.log(working)
-                working = working-1;
-              }, 2000);
-
-              $.ajax({
-                url: '/api/1/products',
-                data: {limit:4, skip:productCursor},
-                success: infiniteHandler($container),
-                dataType: 'json'
-              });
-            }
-          }
-        }, 300);
-      });
-    </script>
     <div class="dom-body-text dom-body-text-1" id="dom-elem-29">
       <p class="p-1">This is body text</p>
     </div>
@@ -173,59 +31,60 @@
   </div>
   <div class="content">
     <div class ="herobackground">
-    <div class="limiter">
-      <span id="howWorks" class="section"></span>
+      <div class="limiter">
+        <span id="howWorks" class="section"></span>
 
-      <div class="sectionheader">
-        <h1 class="h1-1">How It Works <small class="small-2"><br>We're here to help guys</small>
-        </h1>
-      </div>
-      <div class="hero-wrapper">
-        <img class="heroimg" src="/easel/heart.png" />      
-        <div class="hero-header">
+        <div class="sectionheader">
+          <h1 class="h1-1">How It Works <small class="small-2"><br>We're here to help guys</small>
+          </h1>
+        </div>
+        <div class="hero-wrapper">
+          <img class="heroimg" src="/easel/heart.png" />      
+          <div class="hero-header">
+            <h1 class="h1-2">
+              <span>Show Her Your Love</span> <small><br>We help guys by de-stressing the gift-giving process. Give her the best.</small>
+            </h1>
+          </div>
+        </div>
+        <div class="hero-wrapper">
+          <img class="heroimg" src="/easel/giftfinder.png" /> <div class="hero-header">
           <h1 class="h1-2">
-            <span>Show Her Your Love</span> <small><br>We help guys by de-stressing the gift-giving process. Give her the best.</small>
+            <span>Find Gifts She'll Love</span> <small><br>We'll bring you only the best girl-approved gift ideas from around the internet.</small>
           </h1>
         </div>
       </div>
       <div class="hero-wrapper">
-        <img class="heroimg" src="/easel/giftfinder.png" /> <div class="hero-header">
-        <h1 class="h1-2">
-          <span>Find Gifts She'll Love</span> <small><br>We'll bring you only the best girl-approved gift ideas from around the internet.</small>
-        </h1>
+        <img class="heroimg" src="/easel/never.png" />
+        <div class="hero-header">
+          <h1 class="h1-2">
+            <span>Never Forget a Special Day</span> <small><br>We're working on tools that will remind you anytime a special event is coming up.<br></small>
+          </h1>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <div class="emailwrapper"
+  <div id="emailform">
+    <div class="emaillimiter">
+      <form id ="email" action="/subscribe" method="POST">
+        <div>
+          <input type="text" class="emailfield" placeholder="Stay in the loop." name="email">
+          <button class="emailbutton">
+            <h3 class="submit">Submit Email</h3></button>
+            <span class="OR">or</span>
+            <button class="facebook-login-btb">
+              <a class = "facebooktext" href="#">login with <span>facebook</span></a>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-    <div class="hero-wrapper">
-      <img class="heroimg" src="/easel/never.png" />
-      <div class="hero-header">
-        <h1 class="h1-2">
-          <span>Never Forget a Special Day</span> <small><br>We're working on tools that will remind you anytime a special event is coming up.<br></small>
-        </h1>
-      </div>
-    </div>  
   </div>
-</div>
-<div class="emailwrapper"
-  <div id="emailform">
-  <div class="emaillimiter">
-    <form id ="email" action="/subscribe" method="POST">
-  <div>
-    <input type="text" class="emailfield" placeholder="Stay in the loop." name="email">
-      <button class="emailbutton">
-    <h3 class="submit">Submit Email</h3></button>
-    <span class="OR">or</span>
-      <button class="facebook-login-btb">
-        <a class = "facebooktext" href="#">login with <span>facebook</span></a>
-      </button>
-      </div>
-    </form>
-  </div>
-  </div>
-</div>
   <div id="aboutus">
     <div class = "limiter">
       <div class="aboutustext">  
         <div class="sectionheader">
+<<<<<<< HEAD
           <span id="aboutUs" class="section">
         <h1 class="h1-3">Who We Are</h1>
       </div>
@@ -254,15 +113,51 @@
     <div class = "portraitwrapper">
       <div class="circlemask">
         <img class="portrait" src="/images/nickcomp.png"/>
+=======
+          <span id="aboutUs" class="section"></span>
+          <h1 class="h1-3">Who We Are</h1>
+        </div>
+>>>>>>> 72872ec402785d1251f04cb44d59d67b9fa289a6
       </div>
- <div class="page-header page-header-7">
-        <h1 class="h1-2">
-          <span>Nick</span> <small class="small-3"><br>Google Docs</small> 
-        </h1>
+      <div class="aboutuswrapper">
+        <div class = "portraitwrapper">
+          <div class="circlemask">
+            <img class="portrait" src="/easel/image-3.png" />
+          </div>
+          <div class="page-header page-header-6">
+            <h1 class="h1-2">
+              <span>Zack</span> <small class="small-3"><br>Development</small>
+            </h1>
+          </div>
+        </div>
+        <div class = "portraitwrapper">
+          <div class="circlemask">
+            <img class="portrait" src="/images/mr8bit.png" />
+          </div>
+          <div class="page-header page-header-6">
+            <h1 class="h1-2">
+              <span>Mauricio</span> <small class="small-3"><br>Spreadsheets</small>
+            </h1>
+          </div>
+        </div>
+        <div class = "portraitwrapper">
+          <div class="circlemask">
+            <img class="portrait" src="/images/nickcomp.png"/>
+          </div>
+          <div class="page-header page-header-7">
+            <h1 class="h1-2">
+              <span>Nick</span> <small class="small-3"><br>Google Docs</small> 
+            </h1>
+          </div>
+        </div>
       </div>
+<<<<<<< HEAD
     </div>
   </div>
     <span id="contactus" class="section"></span>
+=======
+      <span id="contactus" class="section"></span>
+>>>>>>> 72872ec402785d1251f04cb44d59d67b9fa289a6
       <div class="sectionheader">
         <h1>Contact Us</h1>
         <div class = contactlimiter>
@@ -270,45 +165,15 @@
           <img class="contacticon" src="/images/contactemail.png" />
           <img class="contacticon" src="/images/contacttwitter.png" />
           <img class="contacticon" src="/images/contactphone.png" />
-         </div>
-       </div>
+        </div>
       </div>
     </div>
   </div>
-<div id="map_canvas" style="background-color: rgb(369, 227, 223); overflow: hidden; -webkit-transform: translateZ(0);"></div>
-  
+  <div id="map_canvas"></div>
+
   <% include products %>
-
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner"> 
-      <div class="limiter">
-        <a id="home" class="brand scrollTo" anchor="home" href="#">BrowniePointer</a>
-       <div class = "menuitem">
-          <a href="#howWorks" class="scrollTo a-1" anchor="howWorks">How It Works</a>
-        </div>
-        <div class = "menuitem">
-          <a href="#aboutUs" class="scrollTo a-1" anchor="aboutUs">Who We Are</a>
-        </div>
-        <div class = "menuitem">
-          <a href="#findGifts" class="scrollTo a-1" anchor="findGifts">Find Gifts</a>
-        </div>
-        <div class = "social-media">
-          <a href = "https://twitter.com/browniepointer">              
-            <i class="icon icon-twitter icon-1"></i>
-          </a>
-          <a href = "http://www.facebook.com/pages/BrowniePointer/250155448421224">
-            <i class="icon icon-facebook-sign icon-1"></i>
-          </a>
-          <a>
-            <i class="icon icon-github icon-1"></i><br><br>
-          </a>
-
-
-        </div>
-      </div>
-  </div>
-</div>
-</div>
+  <% include nav %>
+  <% include maps %>
 </body>
 
 </html>
