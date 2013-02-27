@@ -526,22 +526,23 @@ input:-ms-input-placeholder {  
 #map_canvas{
   width: 100;
   height: 300px;
-  }
-  .contacticon{
-    width: 80px;
-    opacity: .2;
-    -webkit-transition-duration: .3s;
-  }
-    .contacticon:hover{
-    opacity: .8;
-  }
-  .contactlimiter{  
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 300px;
-  }
-  .picturewrapper{
-       display: inline-block;
+}
+.contacticon{
+  width: 80px;
+  opacity: .2;
+  -webkit-transition-duration: .3s;
+}
+.contacticon:hover{
+  opacity: .8;
+}
+.contactlimiter{  
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 300px;
+}
+.picturewrapper{
+  overflow:hidden;
+  clear:both;
 }
 .contacticon{
   width: 80px;
@@ -563,7 +564,3 @@ input:-ms-input-placeholder {  
   overflow: hidden;
 }
 
-.aboutuswrapper{
-  overflow:hidden;
-  clear:both;
-}
