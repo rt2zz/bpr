@@ -1,0 +1,105 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner"> 
+      <div class="limiter">
+        <a id="home" class="brand scrollTo" anchor="home" href="#">BrowniePointer</a>
+        <div class = "menuitem">
+          <a href="#howWorks" class="scrollTo a-1" anchor="howWorks">How It Works</a>
+        </div>
+        <div class = "menuitem">
+          <a href="#aboutUs" class="scrollTo a-1" anchor="aboutUs">Who We Are</a>
+        </div>
+        <div class = "menuitem">
+          <a href="#findGifts" class="scrollTo a-1" anchor="findGifts">Find Gifts</a>
+        </div>
+        <div class = "social-media">
+          <a href = "https://twitter.com/browniepointer">              
+            <i class="icon icon-twitter icon-1"></i>
+          </a>
+          <a href = "http://www.facebook.com/pages/BrowniePointer/250155448421224">
+            <i class="icon icon-facebook-sign icon-1"></i>
+          </a>
+          <a>
+            <i class="icon icon-github icon-1"></i><br><br>
+          </a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+      var windw = this;
+
+      $.fn.followTo = function ( pos ) {
+        var $this = this,
+        $window = $(windw);
+
+        $window.scroll(function(e){
+          if ($window.scrollTop() > pos) {
+            $this.css({
+              position: 'absolute',
+              top: pos
+            });
+          } else {
+            $this.css({
+              position: 'fixed',
+              top:  0
+            });
+          }
+        });
+      };
+
+      $('#banner').followTo(75);
+    </script>
+    <script>
+    $(document).ready(function(){
+      $('.scrollTo').click(function(e){
+        e.preventDefault()
+        var anchor = $(this).attr('anchor')
+        var top = $('#'+anchor).position().top - 80
+        $('html, body').animate({scrollTop:top}, 'slow');
+      });
+      $sections = $('.section')
+      var currentSection = -1
+      var currentPos = 0
+      var limits = []
+
+      limits[-1] = {top:0, bot:$($sections[0]).position().top - 90}
+      
+      $sections.each(function(i, e){
+        var lowerLimit = $('body').height()
+        if(typeof $sections[i+1] != 'undefined') lowerLimit = $($sections[i+1]).position().top - $($sections[i+1]).height()
+        var upperLimit = $($sections[i]).position().top
+        limits[i] = {
+          top: upperLimit +180,
+          bot: lowerLimit
+        }
+        //hack to fix first section
+        if(i==0) limits[0].top = upperLimit -120;
+      });
+
+      limits[limits.length-1].bot = 999999999999;
+
+      $(document).scroll(function(){
+        currentPos = $(this).scrollTop()
+        if(currentPos > limits[currentSection].bot){
+          anchor = $($sections[currentSection+1]).attr('id')
+          $('.scrollTo').parent().removeClass('active') 
+          $('.scrollTo[anchor="'+anchor+'"]').parent().addClass('active')
+          if(typeof limits[currentSection+1] != 'undefined'){
+            currentSection = currentSection+1
+          }
+        } 
+        if(currentPos < limits[currentSection].top){
+          anchor = $($sections[currentSection-1]).attr('id')
+          $('.scrollTo').parent().removeClass('active')
+          $('.scrollTo[anchor="'+anchor+'"]').parent().addClass('active')
+          if(typeof limits[currentSection-1] != 'undefined'){
+            currentSection = currentSection-1
+          }
+        }
+
+      });
+    });
+    </script>
