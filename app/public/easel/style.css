@@ -205,13 +205,10 @@ a, a:hover{
   font-size: 12px;
   color: #e8e8e8;
 }
-.sectionheader h1{
-  font-family:"Marko One";
-  color: #DCDCDC;
-}
 .sectionheader h1.h1-3 {
   font-family:"Marko One";
   color: #ffffff;
+  margin: 0 0 60px 0;
 }
 .sectionheader h1.h1-4 {
   font-family:"Marko One";
@@ -365,7 +362,7 @@ a, a:hover{
 }
 #aboutus{
   background:#b8b8b8;
-  padding: 40px 0;
+  padding: 50px 0 30px 0;
 }
 .portrait{
   width:50px;
@@ -519,29 +516,13 @@ input:-ms-input-placeholder {  
 .circlemask{
   width:50px;
   height:50px;
-  border-radius: 25px;
+  border-radius: 25px
   overflow:hidden;
   margin:0 auto;
 }
 #map_canvas{
   width: 100;
-  height: 300px;
-  }
-  .contacticon{
-    width: 80px;
-    opacity: .2;
-    -webkit-transition-duration: .3s;
-  }
-    .contacticon:hover{
-    opacity: .8;
-  }
-  .contactlimiter{  
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 300px;
-  }
-  .picturewrapper{
-       display: inline-block;
+  height: 400px;
 }
 .contacticon{
   width: 80px;
@@ -556,14 +537,38 @@ input:-ms-input-placeholder {  
   overflow: hidden;
   max-width: 300px;
 }
-
+.picturewrapper{
+  overflow:hidden;
+  clear:both;
+}
+.contacticon{
+  width: 80px;
+  opacity: .2;
+  -webkit-transition-duration: .3s;
+}
+.contacticon:hover{
+  opacity: 1;
+}
+.contactlimiter{  
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 334px;
+}
 .aboutuslimiter{
   max-width: 600px;
   margin: 0 auto;
   overflow: hidden;
 }
-
-.aboutuswrapper{
-  overflow:hidden;
-  clear:both;
+.h1white{
+  font-family:"Marko One";
+  color: #DDDDDD;
+}
+.overmap p#madeinsm{
+  position:absolute;
+  top: 2250px;
+  left: 140px;
+  font-family: "Roboto Condensed";
+  font-weight: 300;
+  font-size: 40px;
+  color:#3399dd;
 }
