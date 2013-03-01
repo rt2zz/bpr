@@ -546,32 +546,29 @@ input:-ms-input-placeholder {  
 .contacticon:hover{
   opacity: .8;
 }
+.contactlimiter a{
+  color: #888888;
+  line-height: 50px;
+  -webkit-transition-duration: .3s;
+  color: transparent;
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
 .contactlimiter{  
+  font-size: 50px;
   margin: 0 auto;
   overflow: hidden;
-  max-width: 300px;
-  font-size: 30px;
+  max-width: 384px;
   color: #888888;
 }
-.contactlimiter:hover{
+.contactlimiter a:hover{
   color:#ffffff;
 }
 .picturewrapper{
   overflow:hidden;
   clear:both;
-}
-.contacticon{
-  width: 80px;
-  opacity: .2;
-  -webkit-transition-duration: .3s;
-}
-.contacticon:hover{
-  opacity: 1;
-}
-.contactlimiter{  
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 334px;
 }
 .aboutuslimiter{
   max-width: 600px;
