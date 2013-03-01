@@ -13,14 +13,14 @@
     FB.getLoginStatus(function(response) {
       console.log(response);
       if (response.status === 'connected') {
-          $.ajax('/user/setup',{
-            type: "POST",
-            data: {
-              fbResponse:response
-            }
-          }).done(function(msg){
-            console.log('message', msg);
-          });
+          // $.ajax('/user/setup',{
+          //   type: "POST",
+          //   data: {
+          //     fbResponse:response
+          //   }
+          // }).done(function(msg){
+          //   console.log('message', msg);
+          // });
       } else if (response.status === 'not_authorized') {
         $('.facebook-login-btb').click(function(){
           fbLogin();

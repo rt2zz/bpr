@@ -1,3 +1,6 @@
+
+
+
 <script id="productTemplate" type="text/x-handlebars-template">
   <div class="gbwrap item">
     <div class="gbwrap-inner">
@@ -36,8 +39,7 @@
   <div class="fullwidth">
     <div class="sectionheader">
       <span id="findGifts" class= "section">
-        <h1 class="h1-pa4">Find Gifts <small class="small-2"><br>Things To Make Her :-)<br></small>
-        </span>
+        <h1 class="h1white">Find Gifts
       </h1>
     </div>
     <div id="productsList" class="products">
@@ -46,3 +48,71 @@
 
   </div>
 </div>
+
+<!-- Infine Loading and Layout Handler -->
+<script>
+  var working = 0;
+  var productCursor = 0;
+
+  
+  $(document).ready(function(){
+    var $container = $('#productsList');
+
+    var source   = $("#productTemplate").html();
+    var template = Handlebars.compile(source);
+    var products = $.parseJSON(data.products)
+    products.forEach(function(product, i){
+      productCursor++;
+      $container.append(template(product));
+    })
+
+    function infiniteHandler($container){
+      return function(data){
+        console.log(data.length);
+        if(data.length == 0){
+          $('#productsBottom').remove();
+          clearInterval(infinite);
+        }
+        data.forEach(function(product, i){
+          productCursor++;
+          var box = $(template(product));
+          $container.append( box ).masonry( 'appended', box );  
+        });
+        $container.imagesLoaded(function(){
+          $container.masonry('reload');
+        });
+        working = working-1;
+      }
+    }
+
+    $container.masonry({
+      itemSelector : '.gbwrap',
+      columnWidth : 400
+    });
+
+    $container.imagesLoaded(function(){
+      $container.masonry('reload');
+    });
+
+    var infinite = setInterval(function(){
+      if(working == 0){
+        var productPos = $('#productsBottom').position().top;
+        var top = $(document).scrollTop();
+        if(productPos < top+$(window).height()){
+          working = 2;
+          setTimeout(function(){
+            console.log(working)
+            working = working-1;
+          }, 2000);
+
+          $.ajax({
+            url: '/api/1/products',
+            data: {limit:4, skip:productCursor},
+            success: infiniteHandler($container),
+            dataType: 'json'
+          });
+        }
+      }
+    }, 300);
+  });
+</script>
