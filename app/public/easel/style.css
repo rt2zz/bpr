@@ -169,12 +169,13 @@ a, a:hover{
   top: 450px;
   left: 1317px;
 }
-.navbar .social-media .icon.icon-1 {
+.navbar .social-media .icon{
   color: #adadad;
   font-size: 26px;
   height: 40px;
   width: 40px;
   -webkit-transition-duration: .5s;
+  display: inline-block;
 }    
 .navbar .social-media .icon:hover {
   color: #333333;
@@ -274,7 +275,8 @@ a, a:hover{
   -webkit-transition-duration: .5s;
 }
 #banner {
-  background: #3399dd;
+  background-image: url('/images/background-ambient.png');
+  background-attachment: fixed;
   border-radius: 0px;
   margin: 0px;
   width: 100%;
@@ -283,6 +285,7 @@ a, a:hover{
   top: 0;
   margin-top:48px;
   left: 0;  
+  background-position: bottom;
 }
 .formbanner {
   background: #b8b8b8;
