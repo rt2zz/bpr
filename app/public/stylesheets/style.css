@@ -362,7 +362,8 @@ a, a:hover{
 .hero-wrapper{
   float:left;
   width:27%;
-  text-align: center;
+  min-width:300px;
+  text-align:center;
   margin: 0 0 75px 71px;
   font-family: "Lato"
 }
@@ -551,6 +552,7 @@ input:-ms-input-placeholder {  
   line-height: 50px;
   -webkit-transition-duration: .3s;
   color: transparent;
+  margin: 0 20px;
   text-shadow: 0px 0px 6px rgba(255,255,255,0.5);
   -webkit-background-clip: text;
      -moz-background-clip: text;
@@ -560,8 +562,8 @@ input:-ms-input-placeholder {  
   font-size: 50px;
   margin: 0 auto;
   overflow: hidden;
-  max-width: 384px;
   color: #888888;
+  text-align:center;
 }
 .contactlimiter a:hover{
   color:#ffffff;
@@ -595,7 +597,7 @@ input:-ms-input-placeholder {  
   font-family: lato;
   font-size: 25px;
   font-weight: 100;
-  line-height: 65px;
+  line-height: 35px;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
