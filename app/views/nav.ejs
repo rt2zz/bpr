@@ -21,7 +21,7 @@
           <a href ="https://github.com/organizations/BrowniePointer">
             <i class="icon icon-github icon-1"></i>
           </a>
-          <a href="tel:5307844387">
+          <a href="tel:5307844387" title="Call BPR: 800-333-3343" class="icon-1 .social-media tooltip">
             <i class="icon icon-phone icon-1"></i>
           </a>
            <a href="mailto:info@browniepointer.com?subject=Browniepointer">
@@ -95,7 +95,7 @@
             currentSection = currentSection+1
           }
         } 
-        if(currentPos < limits[currentSection].top){
+        if(currentPos < limits[currentSection].top){1
           anchor = $($sections[currentSection-1]).attr('id')
           $('.scrollTo').parent().removeClass('active')
           $('.scrollTo[anchor="'+anchor+'"]').parent().addClass('active')

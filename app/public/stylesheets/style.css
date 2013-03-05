@@ -176,6 +176,7 @@ a, a:hover{
   width: 40px;
   -webkit-transition-duration: .5s;
   display: inline-block;
+
 }    
 .navbar .social-media .icon:hover {
   color: #333333;
@@ -210,11 +211,12 @@ a, a:hover{
   font-family:"Roboto Condensed";
   color: #ffffff;
   margin: 0 0 60px 0;  
+  padding: 10px ;
   background-color: #555555;
-  font-size: 53px ;
+  font-size: 60px ;
   font-weight:400;
   color: transparent;
-  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+  text-shadow: 0px 1px 2px rgba(255,255,255,0.5);
   -webkit-background-clip: text;
      -moz-background-clip: text;
           background-clip: text;
@@ -553,7 +555,7 @@ input:-ms-input-placeholder {  
   -webkit-transition-duration: .3s;
   color: transparent;
   margin: 0 20px;
-  text-shadow: 0px 0px 6px rgba(255,255,255,0.5);
+  text-shadow: 0px 0px 9px rgba(255,255,255,0.5);
   -webkit-background-clip: text;
      -moz-background-clip: text;
           background-clip: text;
@@ -578,12 +580,13 @@ input:-ms-input-placeholder {  
   overflow: hidden;
 }
 .h1white{
-  font-family:"Marko One";
+  font-family:"Roboto Condensed";
+  padding: 10px;
   color: #666666;  
-  font-size: 50px ;
+  font-size: 60px ;
   background-color: #B8B8B8;
   color: transparent;
-  text-shadow: 0px 2px 3px rgba(255,255,255,0.87);
+  text-shadow: 0px 1px 2px rgba(255,255,255,0.87);
   -webkit-background-clip: text;
      -moz-background-clip: text;
           background-clip: text;
@@ -601,4 +604,18 @@ input:-ms-input-placeholder {  
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-
+#tooltip{
+  position:absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding:20px;
+  margin: 10px;
+  font-size: 30px;
+  color:#ffffff;
+  display:none;
+  font-family: "Roboto Condensed"; 
+  font-weight: 100;
+  line-height: 1.2em;
+  -webkit-transition-duration: .3s;
+  text-shadow: 2px 2px 4px #666666;
+} 
