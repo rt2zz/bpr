@@ -1,19 +1,19 @@
-
-
-
 <script id="productTemplate" type="text/x-handlebars-template">
   <div class="gbwrap item">
     <div class="gbwrap-inner">
       <div class="giftbox">
+      <a href="{{ links.affiliate }}">
         <h2 class="gifttitle">{{ name }}</h2>
+        </a>
+        <a href="{{ links.affiliate }}">
         <img class="giftimage" src="{{imgPath media}}" />
+        </a>
         <div class="description">{{ desc }}</div>
 
         <div class="ratingsbox">
-          <h2 class="ratingsheading">Did she like it?</h2>
           <i class="icon icon-thumbs-up icon-2"></i>
           <p class="ratingnumber">27</p>
-          <i class="icon icon-thumbs-down icon-1"></i>
+          <i class="icon icon-thumbs-down icon-2"></i>
           <p class="ratingnumber">2</p>      
           <div class="price">${{ price.base }}</div>
         </div>
