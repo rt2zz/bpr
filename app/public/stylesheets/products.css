@@ -141,7 +141,7 @@
 }
 .thumbbox{
   position:absolute;
-  top: 60px;
+  top: 0;
   height: 0px;
   background: rgba(0, 0, 0, 0.5);
   width:100%;
@@ -175,6 +175,10 @@
   -webkit-transition-duration: .5s;
   opacity: 1;
   height: 50px;
+}
+
+.imagebox{
+  position:relative;
 }
 
  
