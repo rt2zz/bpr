@@ -5204,18 +5204,6 @@ input[type="submit"].btn.btn-mini {
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }
-
-.tooltip {
-  position: absolute;
-  z-index: 1030;
-  display: block;
-  padding: 5px;
-  font-size: 11px;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  visibility: visible;
-}
-
 .tooltip.in {
   opacity: 0.8;
   filter: alpha(opacity=80);

@@ -2,27 +2,31 @@
   padding: 10px;
   border-radius: 15px;
 }
-.ratingsbox p{
-  margin: 0;
-
-}
 .gifttitle {
-  font-family:"Oswald";
-  font-size: 40px;
-  font-weight: normal;
   margin: 5px;
   color: #b5b5b5;
-  -webkit-transition-duration: .3s;
+  -webkit-transition-duration: .2s;
+  font-family: "Abel";
+  margin: 0;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 35px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  margin: 5px 5px;
 }
 .gifttitle:hover {
   color: #666666;
 }
 .ratingsheading {
-  font-family: "Lato";
-  font-size: 20;
-  font-weight: normal;
+  font-family: "roboto condensed";
   margin: 0;
-  ;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .buynow {
   padding: 0px;
@@ -31,7 +35,7 @@
   font-weight: normal;
 }
 .price{
-  color: #969696;
+  color: #c8c8c8;
   font-family: "Oswald";
   font-size: 50px;
   display: inline-block;
@@ -42,15 +46,22 @@
   overflow: hidden;
   font-family: "Oswald";
   color: #969696;
-  font-size: 22px;
-  padding: 8px 17px 10px 0px;
+  font-size: 15px;
+  padding: 0px 18px 0px 0px;
   display: inline-block;
 }
 .icon.icon-2 {
-  font-size: 27.77777862548828px;
+  font-size: 30px;
   line-height: 0em;
-  margin: 0px 10px;
-  display: inline-block;  
+  margin: 0px 5px;
+  display: inline-block;
+  -webkit-transition-duration: .2s;  
+}
+.icon-thumbs-up:hover{
+  color: rgba(30, 255, 56, 0.6);
+}
+.icon-thumbs-down:hover{
+  color: rgba(255, 0, 0, 0.6);
 }
 .gbwrap{
   float:left;
@@ -62,7 +73,7 @@
   background: #ffffff;
   border-radius: 8px;
   margin: 0px;
-  border: 4px solid #e0e0e0;
+  border: 4px solid #f8f8f8;
   float: left;
   margin: 10px 5px;
 }
@@ -70,17 +81,33 @@
   border-radius: 15px;
   text-align: center;
   padding: 5px;
-  width: 388px;
+  width: 372px;
+  -webkit-transition-duration: .6s;
+  -moz-transition-duration: .6s;
+  -o-transition-duration: .6s;
+  -ms-transition-duration: .6s; 
+}
+.giftimage:hover {
+  -webkit-filter: grayscale(90%);
+  -moz-filter: grayscale(90%);
+  -o-filter: grayscale(90%);
+  -ms-filter: grayscale(90%);
 }
 .description {
  margin: 10px;
  font-family: "Helvetic Neue", Helvetica, Arial;
  color: #858585;
 }
+ratingsbox{
+  background-color: #f8f8f8;
+}
+.buynow{
+  font-family: "Abel";
+}
  .flat-ok-button {
-  background: rgba(30, 255, 56, 0.470588);
+  background: rgba(30, 255, 56, 0.1);
   color: #666666;
-  font-family:"Helvetica Neue"; 
+  font-family:"Abel"; 
   text-align: center;
   font-weight: normal;
   -moz-box-shadow: none;
@@ -93,12 +120,14 @@
   border: none;
   width: 353px;
   height: 47px;
-  margin: 8px 8px;
-  -webkit-transition-duration: .3s;
+  margin: 8px 14px;
+  -webkit-transition-duration: .2s;
 }
 .flat-ok-button:hover{
   background: rgba(255, 136, 12, 0.458824);
 }
+
+
  
 /*.products {
     -moz-column-count: 3;
