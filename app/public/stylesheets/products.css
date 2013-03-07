@@ -1,6 +1,8 @@
 .ratingsbox{
   padding: 10px;
   border-radius: 15px;
+  position: relative;
+  z-index: 500;
 }
 .gifttitle {
   margin: 5px;
@@ -17,7 +19,7 @@
   margin: 5px 5px;
   display:inline-block;
 }
-.gifttitle:hover {
+.giftbox:hover .gifttitle{
   color: #666666;
 }
 .ratingsheading {
@@ -36,14 +38,17 @@
   font-weight: normal;
 }
 .price{
-  color: #666666;
+  color: #cccccc;
   font-family: "Oswald";
   font-size: 65px;
   display: inline-block;
   float: right;
   margin: 5px;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
-  z-index: 5000;
+  z-index: 500;
+  -webkit-transition-duration: .3s;
+}
+.giftbox:hover .price{
+color: #666666;
 }
 .ratingnumber {
   overflow: hidden;
@@ -56,9 +61,9 @@
   color: #ffffff;
 }
 .icon.icon-2 {
-  font-size: 40px;
+  font-size: 25px;
   line-height: 0em;
-  margin: 13px 15px;
+  margin: 18px 5px;
   display: inline-block;
   z-index: 100;
   color: #ffffff;
@@ -69,10 +74,16 @@
   -webkit-transition-duration:.2s;
 }
 .icon-thumbs-up:hover{
-  color: rgba(30, 255, 56, 0.5);
+  color: rgba(30, 255, 56, 0.8);
 }
 .icon-thumbs-down:hover{
-  color: rgba(255, 0, 0, 0.5);
+  color: rgba(255, 0, 0, 0.8);
+}
+.icon-facebook:hover{
+  color: #3366ff;
+}
+.icon-envelope-alt:hover{
+  color: #FFFF33;
 }
 .gbwrap{
   float:left;
@@ -133,7 +144,7 @@
   width: 353px;
   height: 47px;
   margin: 8px 14px;
-  -webkit-transition-duration: .2s;
+  -webkit-transition-duration: .3s;
   z-index: -200;
 }
 .flat-ok-button:hover{
@@ -142,41 +153,23 @@
 .thumbbox{
   position:absolute;
   top: 0;
+  left:10px;
   height: 0px;
   background: rgba(0, 0, 0, 0.5);
-  width:100%;
+  width:60%;
   visibility: hidden;
   z-index: 50;
   opacity: 0;
-  -webkit-transition-duration: .5s;
-
+  -webkit-transition-duration: .3s;
+  text-align: center;r
 }
 .giftbox:hover .thumbbox{
   display: inline-block;
   visibility: visible;
-  -webkit-transition-duration: .5s;
+  -webkit-transition-duration: .3s;
   opacity: 1;
   height: 50px;
 }
-.socialbox{
-  position:bottom;
-  top: 60px;
-  height: 0px;
-  background: rgba(0, 0, 0, 0.5);
-  width:100%;
-  visibility: hidden;
-  z-index: 50;
-  opacity: 0;
-  -webkit-transition-duration: .5s;
-}
-.giftbox:hover .socialbox{
-  display: inline-block;
-  visibility: visible;
-  -webkit-transition-duration: .5s;
-  opacity: 1;
-  height: 50px;
-}
-
 .imagebox{
   position:relative;
 }
