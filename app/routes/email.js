@@ -9,5 +9,5 @@ app.post('/subscribe', function(req, res){
     console.log(data)
     res.redirect('/')
   })
-  })
+})
 

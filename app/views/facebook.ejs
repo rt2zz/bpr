@@ -9,38 +9,58 @@
       xfbml      : true  // parse XFBML tags on this page?
     });
 
-    // Additional initialization code such as adding Event Listeners goes here
-    FB.getLoginStatus(function(response) {
-      console.log(response);
-      if (response.status === 'connected') {
-          // $.ajax('/user/setup',{
-          //   type: "POST",
-          //   data: {
-          //     fbResponse:response
-          //   }
-          // }).done(function(msg){
-          //   console.log('message', msg);
-          // });
-      } else if (response.status === 'not_authorized') {
-        $('.facebook-login-btb').click(function(){
-          fbLogin();
-        });
-      } else {
-        $('.facebook-login-btb').click(function(){
-          fbLogin();
-        });
-      }
-    });
+    //If no user exists, poll facebook
+    if(!data.user){
+      // Additional initialization code such as adding Event Listeners goes here
+      FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+          if(data.user){
+          }
+          else{
+            console.log('no User!1')
+            $.ajax('/user/setup',{
+                type: "POST",
+                data: {
+                  fbResponse:response
+                }
+              }).done(function(msg){
+                loginCleanup()
+                console.log('message', msg);
+              }); 
+          }
+        } else if (response.status === 'not_authorized') {
+          $('.facebook-login-btb').click(function(){
+            fbLogin();
+          });
+        } else {
+          $('.facebook-login-btb').click(function(){
+            fbLogin();
+          });
+        }
+      });
+    }
   };
 
+  function loginCleanup(){
+    $('.emailwrapper').remove();
+  }
+
   function fbLogin() {
-      FB.login(function(response) {
-          if (response.authResponse) {
-              // connected
-          } else {
-              // cancelled
+    FB.login(function(response) {
+      if (response.authResponse) {
+        $.ajax('/user/setup',{
+          type: "POST",
+          data: {
+            fbResponse:response
           }
-      });
+        }).done(function(msg){
+          loginCleanup()
+          console.log('message', msg);
+        });          
+      } else {
+          // cancelled
+      }
+    });
   }
   // Load the SDK's source Asynchronously
   // Note that the debug version is being actively developed and might 
@@ -53,13 +73,4 @@
      js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
      ref.parentNode.insertBefore(js, ref);
    }(document, /*debug*/ false));
-</script>
-<script>
-
-
-  $(document).ready(function(){
-    // Additional init code here
-
-    
-  });
 </script>

@@ -31,7 +31,7 @@
     if(typeof media[0] != 'undefined') return 'http://'+media[0].path;
     else return '';
   });
-  data = {};
+  data = window.data || {};
   data.products = '<%- JSON.stringify(products) %>';
 </script>
 

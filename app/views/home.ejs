@@ -48,6 +48,7 @@
 
     $('#banner').followTo(75);
     </script>
+    
     <script>
     $(document).ready(function(){
       $('.scrollTo').click(function(e){
@@ -142,23 +143,24 @@
     </div>  
   </div>
 </div>
-<div class="emailwrapper"
-<div id="emailform">
-  <div class="emaillimiter">
-    <form id ="email" action="/subscribe" method="POST">
-      <div>
-        <input type="text" class="emailfield" placeholder="Stay in the loop." name="email">
-        <button class="emailbutton">
-          <h3 class="submit">Submit Email</h3></button>
-          <span class="OR">or</span>
-          <button class="facebook-login-btb">
-            <a class = "facebooktext" href="#">login with <span>facebook</span></a>
-          </button>
-        </div>
-      </form>
+<% if(!user){ %>
+  <div class="emailwrapper">
+    <div id="emailform">
+      <div class="emaillimiter">
+        <form id ="email" action="/subscribe" method="POST">
+          <div>
+            <input type="text" class="emailfield" placeholder="Stay in the loop." name="email">
+            <button class="emailbutton"><h3 class="submit">Submit Email</h3></button>
+            <span class="OR">or</span>
+            <button class="facebook-login-btb">
+              <a class = "facebooktext" href="#">login with <span>facebook</span></a>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+<% } %>
 <div id="aboutus">
   <div class = "limiter">
     <div class="aboutustext">  
@@ -229,10 +231,16 @@
 </p>
 </div>
 
-<% include products %>
-<% include nav %>
+  <% include products %>
+  <% include nav %>
 
 </div>
+<script>
+  console.log('hi')
+  data = window.data || {}
+  data.user = <%- JSON.stringify(user) %>
+  console.log(data)
+</script>
 </body>
 
 </html>

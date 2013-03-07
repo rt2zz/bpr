@@ -11,6 +11,10 @@
         <div class = "menuitem">
           <a href="#findGifts" class="scrollTo a-1" anchor="findGifts">Find Gifts</a>
         </div>
+        <% if(user){ %>
+          <% console.log('UUUU',user) %>
+          <img class="profile-image" src="https://graph.facebook.com/<%= user.fb.id %>/picture"/>
+        <% } %>
         <div class = "social-media">
           <a href = "https://twitter.com/browniepointer">              
             <i class="icon icon-twitter icon-1"></i>
@@ -27,7 +31,9 @@
            <a mailto: "info@browniepointer.com?subject=Browniepointer">
             <i class="icon icon-envelope icon-1"></i>
           </a>
+          
         </div>
+
       </div>
     </div>
   </div>
@@ -69,21 +75,29 @@
       var currentPos = 0
       var limits = []
 
-      limits[-1] = {top:0, bot:$($sections[0]).position().top - 90}
-      
-      $sections.each(function(i, e){
-        var lowerLimit = $('body').height()
-        if(typeof $sections[i+1] != 'undefined') lowerLimit = $($sections[i+1]).position().top - $($sections[i+1]).height()
-        var upperLimit = $($sections[i]).position().top
-        limits[i] = {
-          top: upperLimit +180,
-          bot: lowerLimit
-        }
-        //hack to fix first section
-        if(i==0) limits[0].top = upperLimit -120;
-      });
+      var setLimites = function(){
+        limits[-1] = {top:0, bot:$($sections[0]).position().top - 90}
+        
+        $sections.each(function(i, e){
+          var lowerLimit = $('body').height()
+          if(typeof $sections[i+1] != 'undefined') lowerLimit = $($sections[i+1]).position().top - $($sections[i+1]).height()
+          var upperLimit = $($sections[i]).position().top
+          limits[i] = {
+            top: upperLimit +180,
+            bot: lowerLimit
+          }
+          //hack to fix first section
+          if(i==0) limits[0].top = upperLimit -120;
+        });
 
-      limits[limits.length-1].bot = 999999999999;
+        limits[limits.length-1].bot = 999999999999;
+      }
+      
+      setLimites();
+      $(document).imagesLoaded(function(){
+        setLimites();
+      })
+
 
       $(document).scroll(function(){
         currentPos = $(this).scrollTop()

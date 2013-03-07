@@ -19,10 +19,18 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser('bprSuperOrion'));
   app.use(express.session());
+  app.use(defaults)
   app.use(app.router);
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'public')));
 });
+
+function defaults(req, res, next){
+  console.log('SESSION', req.session)
+  res.locals.user = req.session.user || false
+  next()
+}
+
 
 app.configure('development', function(){
   app.use(express.errorHandler());

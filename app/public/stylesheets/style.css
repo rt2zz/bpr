@@ -600,3 +600,11 @@ input:-ms-input-placeholder {  
   text-transform: uppercase;
 }
 
+.profile-image{
+  padding:5px;
+  background:#eee;
+  float:right;
+  width:44px;
+  margin-top:5px;
+  margin-left:10px;
+}
