@@ -6,15 +6,17 @@
         <h2 class="gifttitle">{{ name }}</h2>
         </a>
         <a href="{{ links.affiliate }}">
+        <div class="socialbox">
+          <i class="icon icon-thumbs-up icon-2"></i>
+          <p class="ratingnumber">27</p>
+          <i class="icon icon-thumbs-down icon-2"></i>
+          <p class="ratingnumber">2</p>      
+        </div>
         <img class="giftimage" src="{{imgPath media}}" />
         </a>
         <div class="description">{{ desc }}</div>
 
         <div class="ratingsbox">
-          <i class="icon icon-thumbs-up icon-2"></i>
-          <p class="ratingnumber">27</p>
-          <i class="icon icon-thumbs-down icon-2"></i>
-          <p class="ratingnumber">2</p>      
           <div class="price">${{ price.base }}</div>
         </div>
         <a href = "{{ links.affiliate }}" target="_blank">
