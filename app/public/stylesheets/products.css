@@ -15,6 +15,7 @@
   text-transform: uppercase;
   line-height: 1.1em;
   margin: 5px 5px;
+  display:inline-block;
 }
 .gifttitle:hover {
   color: #666666;
@@ -35,12 +36,14 @@
   font-weight: normal;
 }
 .price{
-  color: #c8c8c8;
+  color: #666666;
   font-family: "Oswald";
-  font-size: 50px;
+  font-size: 65px;
   display: inline-block;
   float: right;
   margin: 5px;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+  z-index: 5000;
 }
 .ratingnumber {
   overflow: hidden;
@@ -53,26 +56,23 @@
   color: #ffffff;
 }
 .icon.icon-2 {
-  font-size: 30px;
+  font-size: 40px;
   line-height: 0em;
-  margin: 0px 5px;
+  margin: 13px 15px;
   display: inline-block;
   z-index: 100;
   color: #ffffff;
   opacity: .9;
-  text-shadow: 0px 1px 2px rgba(255,255,255,0.5);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
+  -webkit-transition-duration:.2s;
 }
 .icon-thumbs-up:hover{
-  color: rgba(30, 255, 56, 0.6);
-  opacity: .9;
+  color: rgba(30, 255, 56, 0.5);
 }
 .icon-thumbs-down:hover{
-  color: rgba(255, 0, 0, 0.6);
-  opacity: .9;
-  -transition-duration:.2s;
+  color: rgba(255, 0, 0, 0.5);
 }
 .gbwrap{
   float:left;
@@ -97,12 +97,16 @@
   -moz-transition-duration: .6s;
   -o-transition-duration: .6s;
   -ms-transition-duration: .6s; 
+  -webkit-filter: grayscale(60%);
+  -moz-filter: grayscale(60%);
+  -o-filter: grayscale(60%);
+  -ms-filter: grayscale(60%);
 }
-.giftimage:hover {
-  -webkit-filter: grayscale(90%);
-  -moz-filter: grayscale(90%);
-  -o-filter: grayscale(90%);
-  -ms-filter: grayscale(90%);
+.giftbox:hover .giftimage{
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
 }
 .description {
  margin: 10px;
@@ -130,11 +134,12 @@
   height: 47px;
   margin: 8px 14px;
   -webkit-transition-duration: .2s;
+  z-index: -200;
 }
 .flat-ok-button:hover{
   background: rgba(255, 136, 12, 0.458824);
 }
-.socialbox{
+.thumbbox{
   position:absolute;
   top: 60px;
   height: 0px;
@@ -146,12 +151,30 @@
   -webkit-transition-duration: .5s;
 
 }
-.giftbox:hover .socialbox{
+.giftbox:hover .thumbbox{
+  display: inline-block;
   visibility: visible;
   -webkit-transition-duration: .5s;
   opacity: 1;
   height: 50px;
-
+}
+.socialbox{
+  position:bottom;
+  top: 60px;
+  height: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  width:100%;
+  visibility: hidden;
+  z-index: 50;
+  opacity: 0;
+  -webkit-transition-duration: .5s;
+}
+.giftbox:hover .socialbox{
+  display: inline-block;
+  visibility: visible;
+  -webkit-transition-duration: .5s;
+  opacity: 1;
+  height: 50px;
 }
 
  
