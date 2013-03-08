@@ -50,10 +50,10 @@
 .giftbox:hover .price{
 color: #666666;
 }
-.tbox:hover .ratingnumdown{
+.tbox:hover .ratingnumdown, .tbox.active .ratingnumup{
   color: rgba(255, 0, 0, 0.8);
 }
-.tbox:hover .ratingnumup{
+.tbox:hover .ratingnumup, .tbox.active .ratingnumup{
   color: rgba(30, 255, 56, 0.8);
 }
 .ratingnumup{

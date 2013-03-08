@@ -51,7 +51,8 @@
     $('#banner').followTo(75);
 
     $(document).ready(function(){
-      $('#gotosignup').click(function(){
+      $('#gotosignup').click(function(e){
+        e.preventDefault()
         $('#email .emailfield').focus()
       })
     })
