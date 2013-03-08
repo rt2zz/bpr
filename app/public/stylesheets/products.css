@@ -50,10 +50,10 @@
 .giftbox:hover .price{
 color: #666666;
 }
-.tbox:hover .ratingnumdown, .tbox.active .ratingnumup{
+.tbox:hover .ratingnumdown, .tbox .active .ratingnumdown{
   color: rgba(255, 0, 0, 0.8);
 }
-.tbox:hover .ratingnumup, .tbox.active .ratingnumup{
+.tbox:hover .ratingnumup, .tbox .active .ratingnumup{
   color: rgba(30, 255, 56, 0.8);
 }
 .ratingnumup{
@@ -91,10 +91,10 @@ color: #666666;
   background-clip: text;
   -webkit-transition-duration:.2s;
 }
-.tbox:hover .icon-thumbs-up{
+.tbox:hover .icon-thumbs-up, .tbox .active .icon-thumbs-up{
   color: rgba(30, 255, 56, 0.8);
 }
-.tbox:hover .icon-thumbs-down{
+.tbox:hover .icon-thumbs-down, .tbox .active .icon-thumbs-down{
   color: rgba(255, 0, 0, 0.8);
 }
 .icon-facebook:hover{

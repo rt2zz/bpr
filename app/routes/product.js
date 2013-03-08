@@ -23,11 +23,14 @@ app.post('/product/vote/:dir/:pid', function(req, res){
   function vote(){
     var votekey = "votes."+dir
     console.log('vkey',votekey)
-    Product.update({_id: req.params.pid}, {$inc: {votekey : val}}, function(err, p){
+    console.log(val)
+    var ops = {$inc: {}}
+    ops['$inc'][votekey] = val
+    console.log(ops)
+    Product.update({_id: req.params.pid}, ops, function(err, p){
       console.log('updating')
       console.log(err)
       console.log(p)
-      res.send('hi')
     })
   }
 
@@ -42,6 +45,8 @@ app.post('/product/vote/:dir/:pid', function(req, res){
       vote()
     } 
   }
+
+  res.send('hi')
 
 
 })

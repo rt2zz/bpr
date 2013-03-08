@@ -36,8 +36,22 @@ app.post('/user/setup', function(req, res){
       votes:{}
     }
     console.log('FB USER',user)
-    req.session.user = user
-    User.save(user,{upsert:true}, function(err){
+    User.findById(user._id, function(err, doc){
+      console.log('DOC', doc)
+      if(doc){
+        user = doc
+        user.fb = fbUser
+        req.session.user = user
+        User.update(user._id, {$set: {fb: fbUser}}, function(err, doc){
+          console.log('update user', err)
+        })
+      }
+      else{
+        req.session.user = user
+        User.save(user, function(){
+          console.log('SAVE new USER')
+        })
+      }
       res.json(JSON.stringify(user))
     })
   })
