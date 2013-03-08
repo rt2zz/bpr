@@ -631,7 +631,7 @@ input:-ms-input-placeholder {  
 } 
 .whitebutton {
   font-family:"Lato";
-   border: 1px solid #DDD;
+   border: 3px solid #f0f0f0;
    border-radius: 3px;
    text-shadow: 0 1px 1px white;
    -webkit-box-shadow: 0 1px 3px #fff;
@@ -647,16 +647,8 @@ input:-ms-input-placeholder {  
    font-size: 20px;
   -webkit-transition-duration: .2s;
 }
-.whitebutton:hover{
-   background: -webkit-linear-gradient(top, white, #E0E0E0);
-   background:    -moz-linear-gradient(top, white, #E0E0E0);
-   background:     -ms-linear-gradient(top, white, #E0E0E0);
-   background:      -o-linear-gradient(top, white, #E0E0E0);
-  -webkit-transition-duration: .5s;
-
-}
 .whitebutton:active{
-   border: 2px solid #AAA;
+   border: 3px solid #AAA;
    border-bottom-color: #CCC;
    border-top-color: #999;
    -webkit-box-shadow: inset 0 1px 2px #aaa;
