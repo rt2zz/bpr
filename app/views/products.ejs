@@ -9,13 +9,20 @@
         </div>
         <div class="imagebox">
           <div class="thumbbox">
-            <a href="#" class="vote" dir="up"><i class="icon icon-thumbs-up icon-2"></i></a>
-            <p class="ratingnumber">27</p>
-            <a href="#" class="vote" dir="down"><i class="icon icon-thumbs-down icon-2"></i></a>
-            <p class="ratingnumber">2</p>      
+            <div class="tbox">
+              <a href="#" class="vote" dir="up"><i class="icon icon-thumbs-up icon-2"></i>
+              <p class="ratingnumup">27</p></a>
+            </div>
+            <div class="tbox">
+              <a href="#" class="vote" dir="down"><i class="icon icon-thumbs-down icon-2"></i>
+              <p class="ratingnumdown">2</p></a>
+            </div>      
             <i class="icon icon-facebook icon-2"></i>
-            <a href="mailto:?subject=I found an awesome gift found at BrowniePointer...{{ name }}!!!&body=I found a cool gift! Check this out: {{ name }}{{ links.affiliate }}">
-            <i class="icon icon-envelope-alt icon-2"></i>
+            <a href="mailto:?subject=I found an awesome gift found at BrowniePointer...{{ name }}!!!&body=I found a cool gift! Check this out:
+            {{ name }}
+            {{ links.affiliate }}
+            — The Guys at BrowniePointer">
+            <i class="icon icon-envelope icon-2"></i>
             </a>
           </div>
           <a href="{{ links.affiliate }}">

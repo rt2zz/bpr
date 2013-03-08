@@ -49,6 +49,12 @@
     };
 
     $('#banner').followTo(75);
+
+    $(document).ready(function(){
+      $('#gotosignup').click(function(){
+        $('#email .emailfield').focus()
+      })
+    })
     </script>
     
     <script>
@@ -141,11 +147,15 @@
           <span>Never Forget A Special Day</span>
           <small><br>Dominate the calendar with alerts &amp; reminders.<br></small>
         </h1>
+        <a id="gotosignup" href="#formsection" class="scrollTo a-1" anchor="formsection">
+          <button class ="whitebutton"> Click Here</button>
+        </a>
       </div>
     </div>  
   </div>
 </div>
 <% if(!user){ %>
+<span id="formsection" class="section"></span>
   <div class="emailwrapper">
     <div id="emailform">
       <div class="emaillimiter">
@@ -167,7 +177,7 @@
   <div class = "limiter">
     <div class="aboutustext">  
       <div class="sectionheader">
-        <span id="aboutUs" class="section">
+        <span id="aboutUs" class="section"></span>
           <h1 class="h1-3">Who We Are</h1>
         </div>
       </div>
