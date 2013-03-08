@@ -50,7 +50,13 @@
 .giftbox:hover .price{
 color: #666666;
 }
-.ratingnumber {
+.tbox:hover .ratingnumdown{
+  color: rgba(255, 0, 0, 0.8);
+}
+.tbox:hover .ratingnumup{
+  color: rgba(30, 255, 56, 0.8);
+}
+.ratingnumup{
   overflow: hidden;
   font-family: "Oswald";
   color: #969696;
@@ -59,11 +65,23 @@ color: #666666;
   display: inline-block;
   z-index: 100;
   color: #ffffff;
+  -webkit-transition-duration: .3s;
+}
+.ratingnumdown{
+  overflow: hidden;
+  font-family: "Oswald";
+  color: #969696;
+  font-size: 15px;
+  padding: 0px 18px 0px 0px;
+  display: inline-block;
+  z-index: 100;
+  color: #ffffff;
+  -webkit-transition-duration: .3s;
 }
 .icon.icon-2 {
   font-size: 25px;
   line-height: 0em;
-  margin: 18px 5px;
+  margin: 18px 8px;
   display: inline-block;
   z-index: 100;
   color: #ffffff;
@@ -73,17 +91,14 @@ color: #666666;
   background-clip: text;
   -webkit-transition-duration:.2s;
 }
-.icon-thumbs-up:hover{
+.tbox:hover .icon-thumbs-up{
   color: rgba(30, 255, 56, 0.8);
 }
-.icon-thumbs-down:hover{
+.tbox:hover .icon-thumbs-down{
   color: rgba(255, 0, 0, 0.8);
 }
 .icon-facebook:hover{
   color: #3366ff;
-}
-.icon-envelope-alt:hover{
-  color: #FFFF33;
 }
 .gbwrap{
   float:left;
@@ -157,7 +172,6 @@ color: #666666;
   z-index: 50;
   opacity: 0;
   -webkit-transition-duration: .3s;
-  text-align: center;r
 }
 .giftbox:hover .thumbbox{
   display: inline-block;
@@ -169,8 +183,13 @@ color: #666666;
 .imagebox{
   position:relative;
 }
-
- 
+.tbox{
+  display:inline-block;
+  margin: 0 0px 0 -1px;
+}
+.tbox:hover{
+  color:red;
+}
 /*.products {
     -moz-column-count: 3;
     -moz-column-gap: 0px;
