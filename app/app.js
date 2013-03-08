@@ -26,7 +26,6 @@ app.configure(function(){
 });
 
 function defaults(req, res, next){
-  console.log('SESSION', req.session)
   res.locals.user = req.session.user || false
   next()
 }

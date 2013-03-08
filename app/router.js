@@ -3,5 +3,5 @@ function requireRoute(name){
 }
 
 requireRoute('home')
-requireRoute('email')
 requireRoute('user')
+requireRoute('product')

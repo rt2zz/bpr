@@ -1,7 +1,7 @@
 <script id="productTemplate" type="text/x-handlebars-template">
   <div class="gbwrap item">
     <div class="gbwrap-inner">
-      <div class="giftbox">
+      <div class="giftbox" giftid="{{_id}}">
         <div class="titlecontainer">
           <a href="{{ links.affiliate }}">
             <h2 class="gifttitle">{{ name }}</h2>
@@ -9,9 +9,9 @@
         </div>
         <div class="imagebox">
           <div class="thumbbox">
-            <i class="icon icon-thumbs-up icon-2"></i>
+            <a href="#" class="vote" dir="up"><i class="icon icon-thumbs-up icon-2"></i></a>
             <p class="ratingnumber">27</p>
-            <i class="icon icon-thumbs-down icon-2"></i>
+            <a href="#" class="vote" dir="down"><i class="icon icon-thumbs-down icon-2"></i></a>
             <p class="ratingnumber">2</p>      
             <i class="icon icon-facebook icon-2"></i>
             <a href="mailto:?subject=I found an awesome gift found at BrowniePointer...{{ name }}!!!&body=I found a cool gift! Check this out: {{ name }}{{ links.affiliate }}">
@@ -42,6 +42,23 @@
   });
   data = window.data || {};
   data.products = '<%- JSON.stringify(products) %>';
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('#productsList').on('click', '.vote', function(e){
+      e.preventDefault()
+      console.log('vote')
+      var dir = $(this).attr('dir')
+      var pid = $(this).closest('.giftbox').attr('giftid')
+      $.ajax('/product/vote/'+dir+'/'+pid,{
+        type: "POST",
+        data: {}
+      }).done(function(response){
+        console.log(response)
+      }); 
+    })
+  })
 </script>
 
 <div class = "findgifts">
