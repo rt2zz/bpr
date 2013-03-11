@@ -3,7 +3,7 @@ var Product = require('../logic/db/product.js')
 var config = require('../logic/config.js')
 
 app.get('/', function(req, res){
-  Product.find({status: "2"}).limit(4).sort({name:-1}).toArray(function(err, products){
+  Product.find({status: "2"}).limit(8).sort({name:-1}).toArray(function(err, products){
     res.locals.products = products
     res.locals.config = config
     res.render('home')

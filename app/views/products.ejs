@@ -77,7 +77,7 @@
     </div>
     <div id="productsList" class="products">
     </div>
-    <span id="productsBottom"></span>
+    <span id="productsBottom"><i class="icon-gift icon-spin"></i></span>
 
   </div>
 </div>
@@ -155,7 +155,7 @@
 
           $.ajax({
             url: '/api/1/products',
-            data: {limit:4, skip:productCursor},
+            data: {limit:8, skip:productCursor},
             success: infiniteHandler($container),
             dataType: 'json'
           });

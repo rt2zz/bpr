@@ -404,11 +404,10 @@ a, a:hover{
 }
 
 #productsBottom{
-  background:url('/images/loading.gif') no-repeat;
   width:30px;
-  height:30px;
   display:block;
   margin:0 auto;
+  font-size:40px;
 }
 .emailwrapper{
   background-image:url('/images/background-ambient.png');
