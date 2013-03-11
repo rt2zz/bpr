@@ -103,7 +103,8 @@ color: #666666;
 .gbwrap{
   float:left;
   margin:0;
-  width:400px;
+  width:250px;
+  margin:12px;
 }
 .giftbox {
   overflow:hidden;
@@ -117,7 +118,7 @@ color: #666666;
   border-radius: 15px;
   text-align: center;
   padding: 5px;
-  width: 372px;
+  width: 90%;
   -webkit-filter: grayscale(60%);
   -moz-filter: grayscale(60%);
   -o-filter: grayscale(60%);
@@ -160,7 +161,7 @@ color: #666666;
   border-radius: 7px;
   font-size: 25px;
   border: none;
-  width: 353px;
+  width: 90%;
   height: 47px;
   margin: 8px 14px;
   z-index: -200;

@@ -22,24 +22,24 @@
 
 .fullwidth{
   margin:0 auto;
-  width:1600px;
+  width:1644px;
 }
 
-@media (max-width: 1599px) {
+@media (max-width: 1643px) {
   .fullwidth{
-    width:1200px;
+    width:1370px;
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1369px) {
   .fullwidth{
-    width:800px;
+    width:1096px;
   }
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1095px) {
   .fullwidth{
-    width:400px;
+    width:822px;
   }
 }
 .number{
