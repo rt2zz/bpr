@@ -102,7 +102,7 @@
 
     function assignVote(pid){
       console.log('assign v', pid)
-      if(typeof data.user != 'undefined'){
+      if(typeof data.user.votes != 'undefined'){
         console.log('user defined')
         if(typeof data.user.votes[pid] != 'undefined'){
           console.log('duvp', data.user.votes[pid])
