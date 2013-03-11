@@ -659,6 +659,9 @@ input:-ms-input-placeholder {  
    background:     -ms-linear-gradient(top, #E6E6E6, gainsboro);
    background:      -o-linear-gradient(top, #E6E6E6, gainsboro);
 }
+.hero-mega{
+  overflow:hidden;
+}
 .hero-mega:hover .whitebutton{
   border: 3px solid rgba(255, 102, 0, .45);
 }
