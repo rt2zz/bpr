@@ -192,7 +192,7 @@ a, a:hover{
   font-weight: 200;
   display: inline-block;
 }
-div.menuitem.findgiftsnav{
+div.menuitem.findgiftsnav a{
     color: rgba(255,255,255,.5);
     text-decoration: none;
     background-color: rgba(219,87,5,.5);
@@ -207,18 +207,19 @@ div.menuitem.findgiftsnav{
     position:relative;
     top: -6px;
   
-  -webkit-transition: all .1s ease;
-  -moz-transition: all .1s ease;
-  -ms-transition: all .1s ease;
-  -o-transition: all .1s ease;
-  transition: all .1s ease;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
 }
-div.menuitem.findgiftsnav:active{-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,.6), 0px 3px 6px rgba(0,0,0,.9);
+div.menuitem.findgiftsnav:active a{-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,.6), 0px 3px 6px rgba(0,0,0,.9);
     -moz-box-shadow: 0px 3px 0px rgba(219,31,5,.6), 0px 3px 6px rgba(0,0,0,.9);
     box-shadow: 0px 3px 0px rgba(219,31,5,.6), 0px 3px 6px rgba(0,0,0,.9);
     position: relative;
     top: 0px;
 }
+
 .navbar .navbar-inner .nav a.a-2 {
   font-family:"arial";
   font-size: 0px;
@@ -291,7 +292,7 @@ div.menuitem.findgiftsnav:active{-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,.
   color: #ffffff;
   text-shadow: 0 0 15px #888888;  
 }
-.navbar .menuitem.active a,.navbar .menuitem a:hover {
+.navbar .menuitem.active.default a,.navbar .menuitem.default a:hover {
   text-shadow: 0px 0px 0px #ffffff;
   -moz-box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
   -webkit-box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.121569);
@@ -303,6 +304,7 @@ div.menuitem.findgiftsnav:active{-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,.
   background-color: #e5e5e5;
   -webkit-transition-duration: .5s;
 }
+
 #banner {
   background-image: url('/images/background-ambient.png');
   background-attachment: fixed;
