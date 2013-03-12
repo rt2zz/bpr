@@ -213,9 +213,10 @@ div.menuitem.findgiftsnav{
   -o-transition: all .1s ease;
   transition: all .1s ease;
 }
-div.menuitem.findgiftsnav:active{-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,.6), 0px 3px 6px rgba(0,0,0,.9);
-    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,.6), 0px 3px 6px rgba(0,0,0,.9);
-    box-shadow: 0px 3px 0px rgba(219,31,5,.6), 0px 3px 6px rgba(0,0,0,.9);
+div.menuitem.findgiftsnav:active{
+    -webkit-box-shadow: 0px 0px 0px rgba(219,31,5,.4), 0px 0px 1px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 0px 0px rgba(219,31,5,.4), 0px 0px 1px rgba(0,0,0,.9);
+    box-shadow: 0px 0px 0px rgba(219,31,5,.4), 0px 0px 1px rgba(0,0,0,.9);
     position: relative;
     top: 0px;
 }
