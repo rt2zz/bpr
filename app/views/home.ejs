@@ -57,58 +57,7 @@
       })
     })
     </script>
-    
-    <script>
-    $(document).ready(function(){
-      $('.scrollTo').click(function(e){
-      e.preventDefault()
-         var anchor = $(this).attr('anchor')
-         var top = $('#'+anchor).position().top - 80
-         $('html, body').animate({scrollTop:top}, 'slow');
-     });
-     $sections = $('.section')
-     var currentSection = -1
-     var currentPos = 0
-     var limits = []
-
-     limits[-1] = {top:0, bot:$($sections[0]).position().top - 90}
-
-     $sections.each(function(i, e){
-      var lowerLimit = $('body').height()
-      if(typeof $sections[i+1] != 'undefined') lowerLimit = $($sections[i+1]).position().top - $($sections[i+1]).height()
-        var upperLimit = $($sections[i]).position().top
-      limits[i] = {
-        top: upperLimit +180,
-        bot: lowerLimit
-      }
-        //hack to fix first section
-        if(i==0) limits[0].top = upperLimit -120;
-      });
-
-     limits[limits.length-1].bot = 999999999999;
-
-     $(document).scroll(function(){
-      currentPos = $(this).scrollTop()
-      if(currentPos > limits[currentSection].bot){
-        anchor = $($sections[currentSection+1]).attr('id')
-        $('.scrollTo').parent().removeClass('active') 
-        $('.scrollTo[anchor="'+anchor+'"]').parent().addClass('active')
-        if(typeof limits[currentSection+1] != 'undefined'){
-          currentSection = currentSection+1
-        }
-      } 
-      if(currentPos < limits[currentSection].top){
-        anchor = $($sections[currentSection-1]).attr('id')
-        $('.scrollTo').parent().removeClass('active')
-        $('.scrollTo[anchor="'+anchor+'"]').parent().addClass('active')
-        if(typeof limits[currentSection-1] != 'undefined'){
-          currentSection = currentSection-1
-        }
-      }
-
-     });
-   });
-</script>
+  
 <div class="dom-body-text dom-body-text-1" id="dom-elem-29">
   <p class="p-1">This is body text</p>
 </div>
@@ -158,7 +107,7 @@
   </div>
 </div>
 <% if(!user){ %>
-<span id="formsection" class="section"></span>
+<span id="formsection"></span>
   <div class="emailwrapper">
     <div id="emailform">
       <div class="emaillimiter">
@@ -216,7 +165,7 @@
           </div>
         </div>
       </div>
-      <span id="contactus" class="section"></span>
+      <span id="contactus"></span>
       <div class="sectionheader">
         <h1 class="h1-3">Contact Us</h1>
         <div class = "contactlimiter">
