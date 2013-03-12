@@ -3,6 +3,7 @@
   border-radius: 15px;
   position: relative;
   z-index: 500;
+  top: -22px;
 }
 .gifttitle {
   margin: 5px;
@@ -10,7 +11,7 @@
   -webkit-transition-duration: .2s;
   font-family: "Abel";
   margin: 0;
-  font-size: 26px;
+  font-size: 16px;
   font-weight: 100;
   line-height: 35px;
   letter-spacing: 2px;
@@ -40,7 +41,7 @@
 .price{
   color: #cccccc;
   font-family: "Oswald";
-  font-size: 65px;
+  font-size: 55px;
   display: inline-block;
   float: right;
   margin: 5px;
@@ -60,7 +61,7 @@ color: #666666;
   overflow: hidden;
   font-family: "Oswald";
   color: #969696;
-  font-size: 15px;
+  font-size: 12px;
   padding: 0px 18px 0px 0px;
   display: inline-block;
   z-index: 100;
@@ -71,7 +72,7 @@ color: #666666;
   overflow: hidden;
   font-family: "Oswald";
   color: #969696;
-  font-size: 15px;
+  font-size: 12px;
   padding: 0px 18px 0px 0px;
   display: inline-block;
   z-index: 100;
@@ -79,9 +80,9 @@ color: #666666;
   -webkit-transition-duration: .3s;
 }
 .icon.icon-2 {
-  font-size: 25px;
+  font-size: 20px;
   line-height: 0em;
-  margin: 18px 8px;
+  margin: 18px 1px;
   display: inline-block;
   z-index: 100;
   color: #ffffff;
@@ -175,7 +176,7 @@ color: #666666;
   left:10px;
   height: 0px;
   background: rgba(0, 0, 0, 0.5);
-  width:60%;
+  width:70%;
   visibility: hidden;
   z-index: 50;
   opacity: 0;
@@ -193,7 +194,7 @@ color: #666666;
 }
 .tbox{
   display:inline-block;
-  margin: 0 0px 0 -1px;
+  margin: 0 0px 0 2px;
 }
 .tbox:hover{
   color:red;
