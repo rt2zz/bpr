@@ -55,14 +55,12 @@
   $(document).ready(function(){
     $('#productsList').on('click', '.vote', function(e){
       e.preventDefault()
-      console.log('vote')
       var dir = $(this).attr('dir')
       var pid = $(this).closest('.giftbox').attr('giftid')
       $.ajax('/product/vote/'+dir+'/'+pid,{
         type: "POST",
         data: {}
       }).done(function(response){
-        console.log(response)
       }); 
     })
   })
@@ -101,14 +99,9 @@
     })
 
     function assignVote(pid){
-      console.log('assign v', pid)
       if(typeof data.user.votes != 'undefined'){
-        console.log('user defined')
         if(typeof data.user.votes[pid] != 'undefined'){
-          console.log('duvp', data.user.votes[pid])
           var dir = data.user.votes[pid] == -1 ? 'down' : 'up'
-          console.log('move', dir)
-          console.log('on ', pid)
           $('.giftbox[giftid='+pid+']').find('.vote[dir='+dir+']').addClass('active')
         }
       }
@@ -116,7 +109,6 @@
 
     function infiniteHandler($container){
       return function(data){
-        console.log(data.length);
         if(data.length == 0){
           $('#productsBottom').remove();
           clearInterval(infinite);
