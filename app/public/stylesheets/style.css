@@ -192,6 +192,13 @@ a, a:hover{
   font-weight: 200;
   display: inline-block;
 }
+div.menuitem.findgiftsnav{
+  border-width: 6px;
+  border-style: outset;
+  border-color: rgba(255, 155, 0, .5); 
+  line-height: 10px;
+  background: rgba(255, 155, 0, .2);
+}
 .navbar .navbar-inner .nav a.a-2 {
   font-family:"arial";
   font-size: 0px;
@@ -663,4 +670,9 @@ input:-ms-input-placeholder {  
 }
 .hero-mega:hover .whitebutton{
   border: 3px solid rgba(255, 102, 0, .45);
+}
+.icon-cog{
+  -webkit-animation: spin 12s infinite linear;
+
+
 }
