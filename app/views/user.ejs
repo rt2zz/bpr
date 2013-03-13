@@ -50,7 +50,7 @@
 
   function loginRoutine(){
     $('.emailwrapper').remove()
-    $('.flat-ok-button').remove()
+    $('#gotosignup').remove()
     $('.social-media').before('<img class="profile-image" src="https://graph.facebook.com/'+data.user.fb.id+'/picture"/>')
     var votes = data.user.votes
     assignVotes(votes)
